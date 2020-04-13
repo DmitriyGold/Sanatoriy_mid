@@ -14,6 +14,17 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
+        <meta name="keywords" content="санаторий в Подмосковье, профилакторий в Подмосковье, 
+              санаторий союз, санаторий союз мид, санаторий союз мид россии, Cанаторий-профилакторий в МО, 
+              санаторий мид, санаторий мид рф, санаторий мид рф в подмосковье, санаторий мид рф московская область, 
+              санаторий мид, санаторий мид щелковский район, санаторий-профилакторий, 
+              официальный сайт санаторий МИД России, санаторий союз, санаторий щёлково, 
+              санаторий в Подмосковье, оздоровительный отдых в Подмосковье, санаторий путевка, 
+              санаторий без мед. справки, санаторные услуги, санаторий бронирование, санаторий МИД купить путевку,
+              контакты санатория МИД России, питание в санатории, санаторий мид питание, хороший санаторий,
+              телефон санаторий МИД России, программы санатория МИД, лечебный курс в санатории">
+        <meta name="author" content="Золотов Дмитрий Сергеевич">
+        <meta name="description" content="Санаторий-профилакторий «Курорт-парк «Союз» МИД России». Официальный сайт">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php $this->registerCsrfMetaTags() ?>
@@ -114,7 +125,6 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="#">Наши врачи</a>
                                         <a class="dropdown-item" href="#">Методы лечения</a>
                                         <a class="dropdown-item" href="#">Лечебная база</a>
-                                        <a class="dropdown-item" href="#">Что включено в путевку???</a>
                                         <a class="dropdown-item" href="#">Сопутствующие заболевания</a>
                                     </div>
                                 </li> 
@@ -122,7 +132,6 @@ AppAsset::register($this);
                                 <li class="nav-item px-2"><a href="#" class="nav-link">Путевки</a></li>
                                 <li class="nav-item px-2"><a href="#" class="nav-link">Цены</a></li>
                                 <li class="nav-item px-2"><a href="#" class="nav-link">Контакты</a></li>
-
                             </ul>  
                         </nav>
                     </div>
