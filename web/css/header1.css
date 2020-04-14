@@ -1,5 +1,5 @@
 .navbar-brand {
-    color: blue;
+    color: red;
 }
 .header {
     font-size: 18px;
@@ -36,8 +36,8 @@
 }
 
 .header-bottom {
-    background-color: #36B0CF;
-    height: 100%;
+    background-color: #36B0A;
+    height: 90%; 
 }    
 
 .header .navbar-nav>li>a {

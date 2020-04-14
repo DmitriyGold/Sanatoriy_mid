@@ -17,7 +17,7 @@ AppAsset::register($this);
         <meta name="keywords" content="санаторий в Подмосковье, профилакторий в Подмосковье, 
               санаторий союз, санаторий союз мид, санаторий союз мид россии, Cанаторий-профилакторий в МО, 
               санаторий мид, санаторий мид рф, санаторий мид рф в подмосковье, санаторий мид рф московская область, 
-              санаторий мид, санаторий мид щелковский район, санаторий-профилакторий, 
+              санаторий мид щелковский район, санаторий-профилакторий, 
               официальный сайт санаторий МИД России, санаторий союз, санаторий щёлково, 
               санаторий в Подмосковье, оздоровительный отдых в Подмосковье, санаторий путевка, 
               санаторий без мед. справки, санаторные услуги, санаторий бронирование, санаторий МИД купить путевку,
@@ -47,20 +47,20 @@ AppAsset::register($this);
                     <div class="container">                            
 
                         <div class="row p-0 pt-2 m-0">
-                            <div class="col-lg-3 text-center text-lg-left align-self-lg-center">                          
+                            <div class="col-lg-2 text-center text-lg-left align-self-lg-center">                          
                                 <a href="##"><img src="<?php @web ?>/images/logo.png" alt="Логотип"></a>
                             </div>
 
-                            <div class="col-lg-4 text-center align-self-lg-center">                                                                                            
-                                <p class="h6">Московская область, Щелковский район</br>поселок Юность, дом 13</p>
+                            <div class="col-lg-5 text-left align-self-lg-center">                                                                                            
+                                <p class="h6">Все условия для эффективного лечения </br>и комфортного отдыха</p>
                             </div>  
 
-                            <div class="d-none d-lg-block col-lg-3 text-center align-self-lg-center">                                                                                          
-                                <p class="h5">приемная: +7(495)993-02-06, +7(496 56)738-71</p>
-                                <p class="h5">отдел бронирования: +7(495)XXX-XX-XX</p>
+                            <div class="col-lg-3 d-none d-lg-block text-left align-self-lg-center">                                                                                          
+                                <p class="h6">приемная: +7(495)993-02-06</p>
+                                <p class="h6">отдел бронирования: +7(495)XXX-XX-XX</p>
                             </div>   
 
-                            <div class="d-lg-none col-lg-3 text-center align-self-lg-center ">                                                                                          
+                            <div class="col-lg-3 d-lg-none  text-left align-self-lg-center ">                                                                                          
                                 <span class="h5">+7(495)993-02-06, +7(496 56)738-71</span>
                             </div> 
 
@@ -74,14 +74,14 @@ AppAsset::register($this);
 
                         <div class="row m-0 p-0">
 
-                            <div class="col-4 text-left align-self-lg-center">
+                            <div class="d-none col-4 text-left align-self-lg-center">
                                 <!--  Показываем панель админки -->
                                 <?php if ((!Yii::$app->user->isGuest) && (Yii::$app->user->identity->role === 'admin')) : ?>
                                     <span class="small"><a href = "#">Админка</a></span>                                   
                                 <?php endif; ?>
                             </div>
 
-                            <div class="col-8 text-right align-self-lg-center">
+                            <div class="d-none col-8 text-right align-self-lg-center">
                                 <?php if (!Yii::$app->user->isGuest) : ?>
                                     <span class="small"><a href = "#" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
                                 <?php else : ?>
@@ -94,46 +94,46 @@ AppAsset::register($this);
                     </div>
                 </div> 
 
-                <div class="container-fluid header-bottom">                        
-
-                    <div class="container">
-                        <nav  class="col-md-12 pt-0">
-                            <ul class="navbar-nav flex-sm-row justify-content-sm-between align-items-center">
-                                <li class="nav-item dropdown active px-2">
-                                    <a href="#" class="nav-link dropdown-toggle" 
-                                       id="navbarDropdownMenuLink" data-toggle="dropdown" 
-                                       aria-haspopup="true" aria-expanded="false">О санатории</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">О нас</a>
-                                        <a class="dropdown-item" href="#">График работы</a>
-                                        <a class="dropdown-item" href="#">Инфраструктура</a>
-                                        <a class="dropdown-item" href="#">Лицензия</a>
-                                        <a class="dropdown-item" href="#">Контролирующие органы</a>
-                                        <a class="dropdown-item" href="#">Питание</a>
-                                        <a class="dropdown-item" href="#">Отзывы</a>
-                                        <a class="dropdown-item" href="#">Интересные места рядом</a> 
-                                        <a class="dropdown-item" href="#">Нормативные документы</a>
-                                    </div>
-                                </li> 
-                                <li class="nav-item px-2"><a href="#" class="nav-link">Размещение</a></li>
-                                <li class="nav-item dropdown active px-2">
-                                    <a href="#" class="nav-link dropdown-toggle" 
-                                       id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" 
-                                       aria-haspopup="true" aria-expanded="false">Лечение</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="#">Профили лечения</a>
-                                        <a class="dropdown-item" href="#">Наши врачи</a>
-                                        <a class="dropdown-item" href="#">Методы лечения</a>
-                                        <a class="dropdown-item" href="#">Лечебная база</a>
-                                        <a class="dropdown-item" href="#">Сопутствующие заболевания</a>
-                                    </div>
-                                </li> 
-                                <li class="nav-item px-2"><a href="#" class="nav-link">Отдых и развлечения</a></li>
-                                <li class="nav-item px-2"><a href="#" class="nav-link">Путевки</a></li>
-                                <li class="nav-item px-2"><a href="#" class="nav-link">Цены</a></li>
-                                <li class="nav-item px-2"><a href="#" class="nav-link">Контакты</a></li>
-                            </ul>  
-                        </nav>
+                <div class="container-fluid">                        
+                    <div class="header-bottom">                        
+                        <div class="container">
+                            <nav  class="col-md-12 pt-0">
+                                <ul class="navbar-nav flex-sm-row justify-content-sm-between align-items-center">
+                                    <li class="nav-item dropdown active px-2">
+                                        <a href="#" class="nav-link dropdown-toggle" 
+                                           id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                           aria-haspopup="true" aria-expanded="false">О санатории</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">О нас</a>
+                                            <a class="dropdown-item" href="#">График работы</a>
+                                            <a class="dropdown-item" href="#">Инфраструктура</a>
+                                            <a class="dropdown-item" href="#">Лицензия</a>
+                                            <a class="dropdown-item" href="#">Контролирующие органы</a>
+                                            <a class="dropdown-item" href="#">Питание</a>
+                                            <a class="dropdown-item" href="#">Отзывы???</a>
+                                            <a class="dropdown-item" href="#">Интересные места рядом</a> 
+                                            <a class="dropdown-item" href="#">Нормативные документы</a>
+                                        </div>
+                                    </li> 
+                                    <li class="nav-item px-2"><a href="#" class="nav-link">Размещение</a></li>
+                                    <li class="nav-item dropdown active px-2">
+                                        <a href="#" class="nav-link dropdown-toggle" 
+                                           id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" 
+                                           aria-haspopup="true" aria-expanded="false">Лечение</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Профили лечения</a>
+                                            <a class="dropdown-item" href="#">Наши врачи</a>
+                                            <a class="dropdown-item" href="#">Методы лечения</a>
+                                            <a class="dropdown-item" href="#">Лечебная база</a>
+                                        </div>
+                                    </li> 
+                                    <li class="nav-item px-2"><a href="#" class="nav-link">Отдых и развлечения</a></li>
+                                    <li class="nav-item px-2"><a href="#" class="nav-link">Путевки???</a></li>
+                                    <li class="nav-item px-2"><a href="#" class="nav-link">Цены</a></li>
+                                    <li class="nav-item px-2"><a href="#" class="nav-link">Контакты</a></li>
+                                </ul>  
+                            </nav>
+                        </div>
                     </div>
                 </div>                        
 
@@ -154,24 +154,21 @@ AppAsset::register($this);
         </div>
 
         <footer class="footer">
-            <div class="container">
-
+            <div class="container-fluid">
                 <div class="row">
 
-                    <div class="col-lg-6 col-12 text-center align-self-center pt-2">
-                        <p class="pull-left"> <strong>&copy; </strong>
-                            Федеральное государственное бюджетное учреждение санаторий-профилакторий
-                            «Курорт-парк «Союз» Министерства иностранных дел Российской Федерации», 
-                            <?= date('Y') ?>. Все права защищены.</p>   
+                    <div class="col-lg-6 col-6 text-left align-self-center pl-5">
+                        <p class="pull-left"> <strong>&copy; </strong>2017 -
+                            <?= date('Y') ?>. Официальный сайт санатория-профилактория
+                            «Курорт-парк «Союз» Министерства иностранных дел Российской Федерации», Все права защищены.</p>   
                     </div>
-                    <div class="col-lg-4 col-7 text-center align-self-center pt-2">
+                    <div class="col-lg-4 col-4 text-center align-self-center">
                         <p>+7(495)993-02-06, +7(496 56)738-71</p>                                
                     </div>
-                    <div class="col-lg-2 col-5 text-lg-right text-center align-self-center">
-
+                    <div class="col-lg-2 col-2 text-lg-right text-center align-self-center pr-5">
+                        <p>схема проезда</p>   
                     </div>
                 </div>
-
             </div>
         </footer>
 

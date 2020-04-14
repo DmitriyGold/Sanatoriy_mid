@@ -1,6 +1,6 @@
 html,
 body {
-    height: 100%;
+    height: 90%;
 }
 
 .wrap {
@@ -155,7 +155,7 @@ a.desc:after {
 
 #mainCarousel {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .carousel-caption > h4 {
