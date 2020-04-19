@@ -1,0 +1,75 @@
+.navbar-brand {
+    color: blue;
+}
+.header {
+    font-size: 18px;
+    border-width: 0px;
+    border-radius: 0px;
+}
+
+.header .header-btn {
+    background-color: #4A96DF;
+    color: #F2F2F2;
+    width: 140px;
+    font-size: 14px;    
+}
+
+.header .header-btn:hover {
+    background-color: #357CBB; 
+    color: #F2F2F2;
+}
+
+@media(max-width:767px) {
+    .header {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:575px) {
+    .header {
+        font-size: 12px;
+    }
+}
+
+.header-top {
+    background-color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-bottom {
+    background-color: #36B0CF;
+    height: 100%; 
+}    
+
+.header .navbar-nav>li>a {
+    color: rgba(242, 242, 242, 1);
+    background-color: #36B0CF;
+}
+.header .navbar-nav>li>a:hover,
+.header .navbar-nav>li>a:focus {
+    color: rgba(235, 194, 39, 1);
+    background-color: #36B0CF;
+}
+.header .navbar-nav>.active>a,
+.header .navbar-nav>.active>a:hover,
+.header .navbar-nav>.active>a:focus {
+    color: rgba(235, 194, 39, 1);
+    background-color: #36B0CF;
+}
+.header .navbar-toggle {
+    border-color: #36B0CF;
+}
+.header .navbar-toggle:hover,
+.header .navbar-toggle:focus {
+    background-color: #36B0CF;
+}
+.header .navbar-toggle .icon-bar {
+    background-color: #36B0CF;
+}
+.header .navbar-toggle:hover .icon-bar,
+.header .navbar-toggle:focus .icon-bar {
+    background-color: #36B0CF;
+}
+
+
+

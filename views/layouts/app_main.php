@@ -141,7 +141,7 @@ AppAsset::register($this);
 
 
 
-            <div class="container">
+            <div class="container-fluid main-container">
                 <?=
                 Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -159,14 +159,14 @@ AppAsset::register($this);
 
                     <div class="col-lg-6 col-6 text-left align-self-center pl-5">
                         <p class="pull-left"> <strong>&copy; </strong>2017 -
-                            <?= date('Y') ?>. Официальный сайт санатория-профилактория
+                            <?= date('Y') ?>.НЕ официальный сайт санатория-профилактория
                             «Курорт-парк «Союз» Министерства иностранных дел Российской Федерации», Все права защищены.</p>   
                     </div>
                     <div class="col-lg-4 col-4 text-center align-self-center">
                         <p>+7(495)993-02-06, +7(496 56)738-71</p>                                
                     </div>
                     <div class="col-lg-2 col-2 text-lg-right text-center align-self-center pr-5">
-                        <p>схема проезда</p>   
+                        <p>Иконки соц сетей?</p>   
                     </div>
                 </div>
             </div>

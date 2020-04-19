@@ -1,7 +1,9 @@
 <?php
 /* @var $this yii\web\View */
 
-$this->title = 'Санаторий-профилакторий «Курорт-парк «Союз» МИД России». Официальный сайт';
+use yii\helpers\Url;
+
+$this->title = 'Санаторий-профилакторий «Курорт-парк «Союз» МИД России». НЕ Официальный сайт';
 ?>
 <div class="site-index">
 
@@ -12,23 +14,23 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             <li data-target="#mainCarousel" data-slide-to="2"></li>
         </ol>
 
-        <div class="carousel-inner">
+        <div class="carousel-inner pt-4">
             <div class="carousel-item active">
-                <img src="<?php @web ?>/images/carousel/foliage.jpg" class="d-block w-100" alt="листва">
+                <img src="<?php echo Url::to('@web/images/carousel/foliage1.jpg') ?>" class="d-block w-100" alt="листва">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4><strong>Санаторий-профилакторий «Курорт-парк «Союз» МИД России».</strong> <br>
-                        Квалифицированный персонал, современные методы лечения и оздоровления.
+                        <small>Квалифицированный персонал, современные методы лечения и оздоровления.</small>
                     </h4>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php @web ?>/images/carousel/rowan.jpg" class="d-block w-100" alt="рябина">
+                <img src="<?php echo Url::to('@web/images/carousel/rowan1.jpg') ?>" class="d-block w-100" alt="рябина">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
-                    <h4>Верни себе здоровье!</h4>
+                    <h4>Восстановление и оздоровление организма.</h4>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php @web ?>/images/carousel/cone.jpg" class="d-block w-100" alt="шишка">
+                <img src="<?php echo Url::to('@web/images/carousel/cone1.jpg') ?>" class="d-block w-100" alt="шишка">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4>Мы ежедневно доказываем, что лечение можно сочетать с первоклассным отдыхом на природе!</h4>
                 </div>
@@ -45,49 +47,154 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
         </a>
     </div>    
 
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+    <div class="row justify-content-center">
+        <h2>ТЕСТОВЫЙ ВАРИАНТ. САЙТ В РАЗРАБОТКЕ!. </h2>
     </div>
 
-    <div class="body-content">
+    <div class="jumbotron container">
+        <h1>Санаторий-профилакторий «Курорт-парк «Союз» МИД России»</h1>
+        <p class="lead">современное медицинское оборудование, высокий профессионализм врачей, 
+            экологически чистый воздух и живописные окрестности. <br>
+            Здесь готовы позаботиться о вашем здоровье и приятном отдыхе!</p>
+    </div>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+    <div class="row justify-content-center my-5">
+        <p><a class="btn btn-lg btn-success" href="#">Заявка на бронирование</a></p>
+    </div>              
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+    <div class="body-content container">
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+        <div class="row my-2">
+            <div class="col-12 text-center">
+                <h3><strong>Медицинские услуги:</strong></h3>                
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">                        
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/11.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Консультации специалистов</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/22.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Процедурный кабинет</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/33.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Функциональная диагностика</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/44.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Физиотерапия</h4>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/55.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Водолечение</h4>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/66.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Грязелечение</h4>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/77.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Массаж</h4>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/88.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Лечебная физкультура</h4>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/99.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h4>Дерматология. Косметология</h4>
+                                <p></p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+
+        </div>
+
+
+
+        <div class="row justify-content-center my-4">
+            <p><a class="btn btn-lg btn-success" href="#">Акции и специальные предложения</a></p>
+        </div>   
+
+        <div class="row my-4">
+            <div class="col-12 text-center">
+                <h3><strong>Новости:</strong></h3>                
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid, numquam perspiciatis corrupti minima officiis accusantium suscipit natus amet culpa quam voluptatum tempore saepe! Molestiae, dolor rerum placeat consequatur ad odio impedit commodi quod ab cum. Totam, modi, impedit, minus sapiente laborum eaque iste cumque pariatur voluptatibus illum assumenda id ex velit reiciendis quisquam suscipit dolore ipsum tenetur recusandae delectus nam ea possimus rem itaque aliquam quis consequuntur libero dolorum deleniti omnis distinctio adipisci perferendis quo dolorem sed voluptates magnam iusto consectetur ad natus? Fuga, deleniti, assumenda officiis similique placeat nisi laudantium accusantium est eos porro modi reprehenderit error quisquam.
+            </div>
+        </div>
     </div>
+
+    <div class="row m-3 ">
+        <div class="col-12">
+            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/soyuz/1054945411/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Союз</a><a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/resort/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Санаторий в Москве и Московской области</a><iframe src="https://yandex.ru/map-widget/v1/-/COBcJVlz" width="1800" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        </div>            
+    </div>
+
+</div>
 </div>
