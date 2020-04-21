@@ -107,8 +107,8 @@ AppAsset::register($this);
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <a class="dropdown-item" href="<?= Url::to(['/site/about']);?>">О нас</a>
                                             <a class="dropdown-item" href="<?= Url::to(['/site/schedule']);?>">График работы</a>
-                                            <a class="dropdown-item" href="#">Инфраструктура</a>
-                                            <a class="dropdown-item" href="#">Лицензия</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']);?>">Инфраструктура</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/license']);?>">Лицензия</a>
                                             <a class="dropdown-item" href="#">Контролирующие органы</a>
                                             <a class="dropdown-item" href="#">Питание</a>
                                             <a class="dropdown-item" href="#">Отзывы???</a>
@@ -137,10 +137,7 @@ AppAsset::register($this);
                         </div>
                     </div>
                 </div>                        
-
             </header>
-
-
 
             <div class="container-fluid main-container">
                 <?=
@@ -151,7 +148,6 @@ AppAsset::register($this);
                 <?= Alert::widget() ?>
                 <?= $content ?>
             </div>
-
         </div>
 
         <footer class="footer">

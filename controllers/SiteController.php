@@ -119,7 +119,15 @@ class SiteController extends AppController {
     }
 
     public function actionSchedule() {
-        return $this->render('schedule');   
+        return $this->render('schedule');
+    }
+
+    public function actionInfrastructure() {
+        return $this->render('infrastructure');
+    }
+
+    public function actionLicense() {
+        return $this->render('license');
     }
 
 }
