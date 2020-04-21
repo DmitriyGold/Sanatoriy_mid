@@ -6,6 +6,7 @@ use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -104,8 +105,8 @@ AppAsset::register($this);
                                            id="navbarDropdownMenuLink" data-toggle="dropdown" 
                                            aria-haspopup="true" aria-expanded="false">О санатории</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#">О нас</a>
-                                            <a class="dropdown-item" href="#">График работы</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/about']);?>">О нас</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/schedule']);?>">График работы</a>
                                             <a class="dropdown-item" href="#">Инфраструктура</a>
                                             <a class="dropdown-item" href="#">Лицензия</a>
                                             <a class="dropdown-item" href="#">Контролирующие органы</a>
@@ -159,7 +160,7 @@ AppAsset::register($this);
 
                     <div class="col-lg-6 col-6 text-left align-self-center pl-5">
                         <p class="pull-left"> <strong>&copy; </strong>2017 -
-                            <?= date('Y') ?>.НЕ официальный сайт санатория-профилактория
+                            <?= date('Y') ?>. НЕ официальный сайт санатория-профилактория
                             «Курорт-парк «Союз» Министерства иностранных дел Российской Федерации», Все права защищены.</p>   
                     </div>
                     <div class="col-lg-4 col-4 text-center align-self-center">
