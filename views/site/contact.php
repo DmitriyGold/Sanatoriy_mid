@@ -1,5 +1,4 @@
 <?php
-
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
@@ -8,61 +7,42 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Contact';
+$this->title = 'Контакты';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="mt-5 pt-5 container">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="my-2">
+                Федеральное государственное бюджетное учреждение санаторий-профилакторий «Курорт-парк «Союз» 
+                Министерства иностранных дел Российской Федерации»</h4>
 
-    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+            <h5 class="mt-5 mb-2">Адрес: </h5> 
 
-        <div class="alert alert-success">
-            Thank you for contacting us. We will respond to you as soon as possible.
+            <p>141142, Московская область, город  Лосино- Петровский, поселок Юность, 
+                территория Санаторий-профилакторий «Курорт-Парк «Союз», строение 4, корпус 2.</p>
+
+
+            <h5 class="mt-5 mb-1">Телефоны:</h5>
+            <p><ul>
+                <li>приемная: +7(495)993-02-06, +7(49656)738-71</li>
+                <li>бухгалтерия: +7(495)993-02-33</li>
+                <li>ресепшн (reception): +7(495)229-30-99</li>
+                <li>FAX: +7(496)567-38-59</li>
+            </ul>
+
+
+            <h5 class="mt-5 mb-1">Адреса e-mail:</h5>
+            <p><ul>
+                <li>Общие обращения: mail@souz-mid.ru</li>
+                <li>Корпоративный отдел: korp@souz-mid.ru</li>
+                <li>Жалобы и предложения: dir@souz-mid.ru</li>
+                <li>Частные обращения: reception@souz-mid.ru</li>
+            </ul>
+
+            </p>
+
+
         </div>
-
-        <p>
-            Note that if you turn on the Yii debugger, you should be able
-            to view the mail message on the mail panel of the debugger.
-            <?php if (Yii::$app->mailer->useFileTransport): ?>
-                Because the application is in development mode, the email is not sent but saved as
-                a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
-                application component to be false to enable email sending.
-            <?php endif; ?>
-        </p>
-
-    <?php else: ?>
-
-        <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
-        </p>
-
-        <div class="row">
-            <div class="col-lg-5">
-
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-
-                    <?= $form->field($model, 'email') ?>
-
-                    <?= $form->field($model, 'subject') ?>
-
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
-
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
-
-                    <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                    </div>
-
-                <?php ActiveForm::end(); ?>
-
-            </div>
-        </div>
-
-    <?php endif; ?>
+    </div>
 </div>

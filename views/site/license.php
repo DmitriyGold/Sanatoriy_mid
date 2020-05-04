@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-12  align-content-center">
 
             <img src="<?= Url::to('@web/images/license/license.jpg'); ?>" alt="лицензия"> <br><br>
-            <a href="#">открыть в формате .PDF</a>  
+            <a href="#">полный перечень нормативных документов в формате .PDF</a>  
         </div>
     </div>
 </div>

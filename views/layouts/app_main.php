@@ -49,7 +49,8 @@ AppAsset::register($this);
 
                         <div class="row p-0 pt-2 m-0">
                             <div class="col-lg-2 text-center text-lg-left align-self-lg-center">                          
-                                <a href="##"><img src="<?php @web ?>/images/logo.png" alt="Логотип"></a>
+                                <a href="<?= Url::to(['/site/index']);?>"><img class="my-logo m-2" src="<?php @web ?>/images/soyuz-logo.png" alt="Логотип"></a>
+                                
                             </div>
 
                             <div class="col-lg-5 text-left align-self-lg-center">                                                                                            
@@ -57,12 +58,12 @@ AppAsset::register($this);
                             </div>  
 
                             <div class="col-lg-3 d-none d-lg-block text-left align-self-lg-center">                                                                                          
-                                <p class="h6">приемная: +7(495)993-02-06</p>
-                                <p class="h6">отдел бронирования: +7(495)XXX-XX-XX</p>
+                                <p class="h6">ресепшн: +7(495) 229-30-99</p>
+                                <p class="h6">FAX: +7(496) 567-38-59</p>
                             </div>   
 
                             <div class="col-lg-3 d-lg-none  text-left align-self-lg-center ">                                                                                          
-                                <span class="h5">+7(495)993-02-06, +7(496 56)738-71</span>
+                                <span class="h5">+7(495) 229-30-99, FAX: +7(496) 567-38-59</span>
                             </div> 
 
 
@@ -105,10 +106,10 @@ AppAsset::register($this);
                                            id="navbarDropdownMenuLink" data-toggle="dropdown" 
                                            aria-haspopup="true" aria-expanded="false">О санатории</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/about']);?>">О нас</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/schedule']);?>">График работы</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']);?>">Инфраструктура</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/license']);?>">Лицензия</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/about']); ?>">О нас</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/schedule']); ?>">График работы</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']); ?>">Инфраструктура</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
                                             <a class="dropdown-item" href="#">Контролирующие органы</a>
                                             <a class="dropdown-item" href="#">Питание</a>
                                             <a class="dropdown-item" href="#">Отзывы???</a>
@@ -131,7 +132,7 @@ AppAsset::register($this);
                                     <li class="nav-item px-2"><a href="#" class="nav-link">Отдых и развлечения</a></li>
                                     <li class="nav-item px-2"><a href="#" class="nav-link">Путевки???</a></li>
                                     <li class="nav-item px-2"><a href="#" class="nav-link">Цены</a></li>
-                                    <li class="nav-item px-2"><a href="#" class="nav-link">Контакты</a></li>
+                                    <li class="nav-item px-2"><a href="<?= Url::to(['/site/contact']); ?>" class="nav-link">Контакты</a></li>
                                 </ul>  
                             </nav>
                         </div>
@@ -160,7 +161,7 @@ AppAsset::register($this);
                             «Курорт-парк «Союз» Министерства иностранных дел Российской Федерации», Все права защищены.</p>   
                     </div>
                     <div class="col-lg-4 col-4 text-center align-self-center">
-                        <p>+7(495)993-02-06, +7(496 56)738-71</p>                                
+                        <p>приемная: +7(495)993-02-06, +7(49656)738-71</p>                                
                     </div>
                     <div class="col-lg-2 col-2 text-lg-right text-center align-self-center pr-5">
                         <p>Иконки соц сетей?</p>   
