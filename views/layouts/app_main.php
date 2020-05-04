@@ -110,11 +110,11 @@ AppAsset::register($this);
                                             <a class="dropdown-item" href="<?= Url::to(['/site/schedule']); ?>">График работы</a>
                                             <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']); ?>">Инфраструктура</a>
                                             <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
-                                            <a class="dropdown-item" href="#">Контролирующие органы</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
                                             <a class="dropdown-item" href="#">Питание</a>
                                             <a class="dropdown-item" href="#">Отзывы???</a>
                                             <a class="dropdown-item" href="#">Интересные места рядом</a> 
-                                            <a class="dropdown-item" href="#">Нормативные документы</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/requisites']); ?>">Карточка реквизитов</a>
                                         </div>
                                     </li> 
                                     <li class="nav-item px-2"><a href="#" class="nav-link">Размещение</a></li>

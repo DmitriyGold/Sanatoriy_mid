@@ -6,14 +6,19 @@ $this->title = 'Лицензия';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="mt-5 pt-5 container  align-content-center">
-    <div class="row  align-content-center">
-        <div class="col-12  align-content-center">
+<div class="mt-5 pt-5 container">
+    <div class="row">
+        <div class="col-12 col-lg-6 ">
+            <img class="my-license" src="<?= Url::to('@web/images/license/license1.jpg'); ?>" alt="лицензия сторона 1">
+        </div>
 
-            <img src="<?= Url::to('@web/images/license/license.jpg'); ?>" alt="лицензия"> <br><br>
-            <a href="#">полный перечень нормативных документов в формате .PDF</a>  
+        <div class="col-12 col-lg-6">
+            <img class="my-license" src="<?= Url::to('@web/images/license/license2.jpg'); ?>" alt="лицензия сторона 2">
         </div>
     </div>
+
+    <a class="my-3" href="#">нормативные документы в формате .PDF</a> 
+
 </div>
 
 

@@ -129,5 +129,12 @@ class SiteController extends AppController {
     public function actionLicense() {
         return $this->render('license');
     }
-
+    
+    public function actionSupervision() {
+        return $this->render('supervision');
+    }    
+    
+    public function actionRequisites() {
+        return $this->render('requisites');
+    }    
 }

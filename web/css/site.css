@@ -322,4 +322,6 @@ a.desc:after {
     text-shadow: black 2px 3px 4px;
 }
 
-
+.my-license {
+    width: 95%;
+}
