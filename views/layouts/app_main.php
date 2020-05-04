@@ -58,12 +58,12 @@ AppAsset::register($this);
                             </div>  
 
                             <div class="col-lg-3 d-none d-lg-block text-left align-self-lg-center">                                                                                          
-                                <p class="h6">ресепшн: +7(495) 229-30-99</p>
-                                <p class="h6">FAX: +7(496) 567-38-59</p>
+                                <p class="h6">reception: +7(495)229-30-99</p>
+                                <p class="h6">FAX: +7(496)567-38-59</p>
                             </div>   
 
                             <div class="col-lg-3 d-lg-none  text-left align-self-lg-center ">                                                                                          
-                                <span class="h5">+7(495) 229-30-99, FAX: +7(496) 567-38-59</span>
+                                <span class="h5">+7(495)229-30-99, FAX: +7(496)567-38-59</span>
                             </div> 
 
 
@@ -113,7 +113,7 @@ AppAsset::register($this);
                                             <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
                                             <a class="dropdown-item" href="#">Питание</a>
                                             <a class="dropdown-item" href="#">Отзывы???</a>
-                                            <a class="dropdown-item" href="#">Интересные места рядом</a> 
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
                                             <a class="dropdown-item" href="<?= Url::to(['/site/requisites']); ?>">Карточка реквизитов</a>
                                         </div>
                                     </li> 

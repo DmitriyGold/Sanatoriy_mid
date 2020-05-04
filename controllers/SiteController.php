@@ -20,7 +20,7 @@ class SiteController extends AppController {
                 'class' => AccessControl::className(),
                 'only' => ['logout'],
                 'rules' => [
-                    [
+                        [
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
@@ -129,12 +129,17 @@ class SiteController extends AppController {
     public function actionLicense() {
         return $this->render('license');
     }
-    
+
     public function actionSupervision() {
         return $this->render('supervision');
-    }    
-    
+    }
+
     public function actionRequisites() {
         return $this->render('requisites');
-    }    
+    }
+
+    public function actionMuseums() {
+        return $this->render('museums');
+    }
+
 }
