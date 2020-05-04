@@ -8,6 +8,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Profil;
 
 class SiteController extends AppController {
 
@@ -142,4 +143,12 @@ class SiteController extends AppController {
         return $this->render('museums');
     }
 
+        public function actionPage_profiles() {
+            
+        $profiles = Profil::find()->all();
+            
+        return $this->render('page_profiles', compact('profiles'));
+    }
+    
+    
 }

@@ -123,10 +123,9 @@ AppAsset::register($this);
                                            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" 
                                            aria-haspopup="true" aria-expanded="false">Лечение</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#">Профили лечения</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/page_profiles']); ?>">Профили лечения</a>
                                             <a class="dropdown-item" href="#">Наши врачи</a>
-                                            <a class="dropdown-item" href="#">Методы лечения</a>
-                                            <a class="dropdown-item" href="#">Лечебная база</a>
+                                            <a class="dropdown-item" href="<?= Url::to(['/site/index#servise'])?>">Медицинские услуги</a>
                                         </div>
                                     </li> 
                                     <li class="nav-item px-2"><a href="#" class="nav-link">Отдых и развлечения</a></li>
