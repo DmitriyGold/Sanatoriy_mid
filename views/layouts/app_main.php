@@ -49,8 +49,8 @@ AppAsset::register($this);
 
                         <div class="row p-0 pt-2 m-0">
                             <div class="col-lg-2 text-center text-lg-left align-self-lg-center">                          
-                                <a href="<?= Url::to(['/site/index']);?>"><img class="my-logo m-2" src="<?php @web ?>/images/soyuz-logo.png" alt="Логотип"></a>
-                                
+                                <a href="<?= Url::to(['/site/index']); ?>"><img class="my-logo m-2" src="<?= Url::to('@web/images/soyuz-logo.png') ?>" alt="Логотип"></a>
+
                             </div>
 
                             <div class="col-lg-5 text-left align-self-lg-center">                                                                                            
