@@ -174,8 +174,8 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 </div>                  
             </div>
 
-        </div>
-
+        </div>    
+        
         <div class="row justify-content-center my-4">
             <p><a class="btn btn-lg btn-success" href="#">Акции и специальные предложения</a></p>
         </div>   

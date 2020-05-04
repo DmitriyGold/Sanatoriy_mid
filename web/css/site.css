@@ -227,10 +227,10 @@ a.desc:after {
 
 .parallax1 {
     /* The image used */
-    background-image: url("/images/paralax1.jpg");
+    background-image: url("/images/parallax.jpg");
 
     /* Set a specific height */
-    min-height: 350px; 
+    min-height: 570px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
