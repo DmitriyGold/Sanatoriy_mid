@@ -150,7 +150,7 @@ AppAsset::register($this);
             </div>
         </div>
 
-        <footer class="footer">
+        <footer class="footer fixed-bottom">
             <div class="container-fluid">
                 <div class="row">
 
@@ -176,3 +176,7 @@ AppAsset::register($this);
     </body>
 </html>
 <?php $this->endPage() ?>
+
+
+
+
