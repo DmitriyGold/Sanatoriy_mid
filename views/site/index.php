@@ -75,9 +75,10 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card-services">                        
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/11.jpg') ?>" alt="">                                      
+                        <a href="<?= Url::to(['/services/consultations']); ?>"> <img src="<?php echo Url::to('@web/images/med_service/11.jpg') ?>" alt="">                                      
                             <div class="card-content-services">
-                                <h4>Консультации специалистов</h4>
+                                
+                                                                                              <h4>Консультации специалистов</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <p></p> 
                             </div> </a> 
@@ -87,7 +88,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/22.jpg') ?>" alt="">                                      
+                        <a href="<?= Url::to(['/services/procedures']); ?>"> <img src="<?php echo Url::to('@web/images/med_service/22.jpg') ?>" alt="">                                      
                             <div class="card-content-services">
                                 <h4>Процедурный кабинет</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
