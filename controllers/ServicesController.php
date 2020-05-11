@@ -17,22 +17,16 @@ class ServicesController extends AppController {
     public function actionConsultations() {
 
         $consultations = Consultations::find()->all();
-
-        return $this->render('consultations', compact('consultations'));
+        $diagnostics = Diagnostics::find()->all(); 
+        
+        return $this->render('consultations', compact('consultations','diagnostics'));
     }
 
     public function actionProcedures() {
 
         $procedures = Procedures::find()->all();
-
+       
         return $this->render('procedures', compact('procedures'));
-    }
-
-    public function actionDiagnostics() {
-
-        $diagnostics = Diagnostics::find()->all();
-
-        return $this->render('diagnostics', compact('diagnostics'));
     }
 
     public function actionPhysiotherapy() {

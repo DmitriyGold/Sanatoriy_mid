@@ -74,6 +74,10 @@ nav.navbar .dropdown:hover > .dropdown-menu {
     text-align: center;
 }
 
+.jumbotron p{
+    text-align: center;
+}
+
 .error-summary {
     color: #a94442;
     background: #fdf7f7;

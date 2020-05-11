@@ -114,6 +114,7 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="#">Питание</a>
                                         <a class="dropdown-item" href="#">Отзывы???</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/conditions']); ?>">Условия оказания медицинской помощи</a>                                         
                                         <a class="dropdown-item" href="<?= Url::to(['/site/requisites']); ?>">Карточка реквизитов</a>
                                     </div>
                                 </li> 

@@ -165,4 +165,8 @@ class SiteController extends AppController {
         return $this->render('prices');
     }
 
+    public function actionConditions() {
+        return $this->render('conditions');
+    }
+
 }
