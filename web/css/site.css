@@ -1,6 +1,6 @@
 html,
 body {
-    height: 90%;
+    height: 100%;
 }
 
 .wrap {
@@ -8,7 +8,8 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Verdana', sans-serif;
+    color: #592405;
 }
 
 .wrap > .container {
@@ -20,11 +21,16 @@ body {
 }
 
 .footer {
-    font-family: 'Roboto', sans-serif;
-    height: 55px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
+    height: 75px;
+    background-color: #46718C;
+    color: #D2E8F2;
+    padding-top: 10px;
+    border-top: 3px solid #46718C;
+}
+@media(max-width:1199px) {
+    .my-content {
+        margin-top: 20px !important;
+    }
 }
 
 @media(max-width:991px) {
@@ -32,7 +38,7 @@ body {
         height: 110px;
     }
     .my-content {
-        margin-top: 160px;
+        margin-top: 100px !important;
     }
 }
 
@@ -41,21 +47,20 @@ body {
         font-size: 12px;
     }
     .my-content {
-        margin-top: 140px;
+        margin-top: 140px !important;
     }
 }
 
-
 @media(max-width:575px) {
     .my-content {
-        margin-top: 300px;
+        margin-top: 300px !important;
     }
 }
 
 /* для выпадающего списка в меню ->*/
 
 nav.navbar .dropdown:hover > .dropdown-menu {
- display: block; 
+    display: block; 
 } 
 
 @media only screen and (max-device-width: 992px){
@@ -67,62 +72,6 @@ nav.navbar .dropdown:hover > .dropdown-menu {
 
 .jumbotron {
     text-align: center;
-    background-color: transparent;
-}
-
-.main-container {
-    color: #5A2804; 
-}
-
-.not-set {
-    color: #c55;
-    font-style: italic;
-}
-
-/* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
-    position: relative;
-    top: 100px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-left: 5px;
-}
-
-a.asc:after {
-    content: /*"\e113"*/ "\e151";
-}
-
-a.desc:after {
-    content: /*"\e114"*/ "\e152";
-}
-
-.sort-numerical a.asc:after {
-    content: "\e153";
-}
-
-.sort-numerical a.desc:after {
-    content: "\e154";
-}
-
-.sort-ordinal a.asc:after {
-    content: "\e155";
-}
-
-.sort-ordinal a.desc:after {
-    content: "\e156";
-}
-
-.grid-view th {
-    white-space: nowrap;
-}
-
-.hint-block {
-    display: block;
-    margin-top: 5px;
-    color: #999;
 }
 
 .error-summary {
@@ -198,18 +147,6 @@ a.desc:after {
     transform: scale(1.1, 1.1);
 }
 
-.text-brown  {
-    color: #5A2804 ;
-}
-
-.line-green {
-    background-color: #79A62F;
-    padding: 0px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    height: 3px;
-}
-
 
 .small-box-1 {
     width: 100%;
@@ -239,52 +176,6 @@ a.desc:after {
     background-size: cover;
 }
 
-.parallax2 {
-    /* The image used */
-    background-image: url("/images/paralax2.jpg");
-
-    /* Set a specific height */
-    min-height: 350px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax3 {
-    /* The image used */
-    background-image: url("/images/paralax3.jpg");
-
-    /* Set a specific height */
-    min-height: 350px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.main-card {
-    position: relative;
-
-}
-
-.main-card img:hover {
-    opacity: 0.9;
-}
-
-.card-content {
-    position: absolute; /* Position the background text */
-    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1; /* Grey text */
-    width: 100%; /* Full width */
-    padding: 20px; /* Some padding */
-}
-
 .main-card-services {
     position: relative;
 }
@@ -299,7 +190,7 @@ a.desc:after {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1; /* Grey text */
+    color: #f1f1f1; /* color text */
     width: 100%; /* Full width */
 
     padding-top:  10px; /* Some padding */
@@ -307,7 +198,6 @@ a.desc:after {
     transition: 0.8s ease;
     overflow: hidden;
     height: 0;
-
 }
 
 .main-card-services:hover  .card-content-services{
@@ -324,4 +214,42 @@ a.desc:after {
 
 .my-license {
     width: 95%;
+}
+
+.block-3px {
+    background-color: #85B634;
+    padding: 0px;
+    margin: 0px;
+    height: 3px;
+    width: 100%;
+}
+
+.block-tabl-1 {
+    background-color: #79A62F;
+    align-content: center;
+    border-bottom: 1px solid black;
+    height: auto;
+}
+
+.block-tabl-2 {
+    background-color: #D2E8F2;
+    align-content: center;
+    border-bottom: 1px solid black;
+    height: 30px;
+    font-size: 14px !important;
+    height: auto;
+}
+
+.my-border-r {
+    border-right:  1px solid black;    
+}
+
+.my-border-b {
+    border-bottom: 1px solid black;
+    font-size: 14px !important; 
+    height: auto;
+}
+
+.my-background-col{
+    background-color: #D2E8F2 !important; 
 }

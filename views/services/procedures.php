@@ -7,27 +7,43 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row my-4">
         <p>Специально оборудованный кабинет для проведения
-         различных лечебно-профилактических процедур. Все процедуры проводятся по назначению врачей
-        . В процедурном кабинете работают медецинские сестры с большим опытом работы
-         , выполняющие все манипуляции одноразовыми инструментами, строго соблюдая все правила асептики</p>
+            различных лечебно-профилактических процедур. Все процедуры проводятся по назначению врачей. 
+        </p>
+        <p>В процедурном кабинете работают медецинские сестры с большим опытом работы, 
+            выполняющие все манипуляции одноразовыми инструментами, строго соблюдая все правила асептики.
+        </p>
     </div>
 
-        <div class="row">
-            <div class="col-1">№</div>
-            <div class="col-9">Наименование процедуры</div>
-            <div class="col-2">Стоимость 1 процедуры, руб</div>
-        </div>    
-    
+    <div class="row block-tabl-1 py-1">
+        <div class="col-1 my-border-r">№</div>
+        <div class="col-9 my-border-r">Наименование процедуры</div>
+        <div class="col-2"><small>Стоимость 1 процедуры, руб</small></div>
+    </div>    
+
     <?php $i = 0; ?>
     <?php foreach ($procedures as $value) { ?>
-        <?php $i++; ?>
-        <div class="row">
-            <div class="col-1"> <?= $i ?></div>
-            <div class="col-9"><?= $value->name ?></div>
-            <div class="col-2"><?= $value->price1 ?></div>
-        </div>
+        <?php
+        if ($value->hide == 0) {
+            $i++;
+            if (($i % 2) == 0) {
+                ?>
+                <div class="row block-tabl-2 py-1">
+                    <div class="col-1 my-border-r"> <?= $i ?></div>
+                    <div class="col-9 my-border-r"><?= $value->name ?></div>
+                    <div class="col-2"><?= $value->price1 ?></div>
+                </div>
 
-    <?php } ?>   
-
+            <?php } else { ?>    
+                <div class="row my-border-b py-1">
+                    <div class="col-1 my-border-r"> <?= $i ?></div>
+                    <div class="col-9 my-border-r"><?= $value->name ?></div>
+                    <div class="col-2"><?= $value->price1 ?></div>
+                </div>
+            <?php
+            }
+        }
+    }
+    ?>   
+    <div class="block-3px my-4"></div>
 
 </div> 

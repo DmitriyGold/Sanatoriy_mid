@@ -42,9 +42,9 @@ AppAsset::register($this);
 
         <div class="wrap">
 
-            <header class="header fixed-top">
+            <header class="header fixed-top container-fluid">
 
-                <div class="container-fluid header-top">
+                <div class=" header-top">
                     <div class="container">                            
 
                         <div class="row p-0 pt-2 m-0">
@@ -54,16 +54,16 @@ AppAsset::register($this);
                             </div>
 
                             <div class="col-lg-5 text-left align-self-lg-center">                                                                                            
-                                <p class="h6">Все условия для эффективного лечения </br>и комфортного отдыха</p>
+                                <p>Все условия для эффективного лечения </br>и комфортного отдыха</p>
                             </div>  
 
                             <div class="col-lg-3 d-none d-lg-block text-left align-self-lg-center">                                                                                          
-                                <p class="h6">reception: +7(495)229-30-99</p>
-                                <p class="h6">FAX: +7(496)567-38-59</p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i> reception: +7(495)229-30-99</p>
+                                <p>FAX: +7(496)567-38-59</p>
                             </div>   
 
                             <div class="col-lg-3 d-lg-none  text-left align-self-lg-center ">                                                                                          
-                                <span class="h5">+7(495)229-30-99, FAX: +7(496)567-38-59</span>
+                                <span><i class="fa fa-phone" aria-hidden="true"></i> +7(495)229-30-99, FAX: +7(496)567-38-59</span>
                             </div> 
 
 
@@ -96,50 +96,50 @@ AppAsset::register($this);
                     </div>
                 </div> 
 
-                <div class="container-fluid">                        
-                    <div class="header-bottom">                        
-                        <div class="container">
-                            <nav  class="col-md-12 pt-0">
-                                <ul class="navbar-nav flex-sm-row justify-content-sm-between align-items-center">
-                                    <li class="nav-item dropdown active px-2">
-                                        <a href="#" class="nav-link dropdown-toggle" 
-                                           id="navbarDropdownMenuLink" data-toggle="dropdown" 
-                                           aria-haspopup="true" aria-expanded="false">О санатории</a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/about']); ?>">О нас</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/schedule']); ?>">График работы</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']); ?>">Инфраструктура</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
-                                            <a class="dropdown-item" href="#">Питание</a>
-                                            <a class="dropdown-item" href="#">Отзывы???</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/requisites']); ?>">Карточка реквизитов</a>
-                                        </div>
-                                    </li> 
-                                    <li class="nav-item px-2"><a href="#" class="nav-link">Размещение</a></li>
-                                    <li class="nav-item dropdown active px-2">
-                                        <a href="#" class="nav-link dropdown-toggle" 
-                                           id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" 
-                                           aria-haspopup="true" aria-expanded="false">Лечение</a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/page_profiles']); ?>">Профили лечения</a>
-                                            <a class="dropdown-item" href="#">Наши врачи</a>
-                                            <a class="dropdown-item" href="<?= Url::to(['/site/index#servise'])?>">Медицинские услуги</a>
-                                        </div>
-                                    </li> 
-                                    <li class="nav-item px-2"><a href="#" class="nav-link">Отдых и развлечения</a></li>
-                                    <li class="nav-item px-2"><a href="#" class="nav-link">Путевки???</a></li>
-                                    <li class="nav-item px-2"><a href="#" class="nav-link">Цены</a></li>
-                                    <li class="nav-item px-2"><a href="<?= Url::to(['/site/contact']); ?>" class="nav-link">Контакты</a></li>
-                                </ul>  
-                            </nav>
-                        </div>
+
+                <div class="header-bottom">                        
+                    <div class="container">
+                        <nav  class="col-md-12 pt-0">
+                            <ul class="navbar-nav flex-sm-row justify-content-sm-between align-items-center">
+                                <li class="nav-item dropdown active px-2">
+                                    <a href="#" class="nav-link dropdown-toggle" 
+                                       id="navbarDropdownMenuLink" data-toggle="dropdown" 
+                                       aria-haspopup="true" aria-expanded="false">О санатории</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/about']); ?>">О нас</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/schedule']); ?>">График работы</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']); ?>">Инфраструктура</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
+                                        <a class="dropdown-item" href="#">Питание</a>
+                                        <a class="dropdown-item" href="#">Отзывы???</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/requisites']); ?>">Карточка реквизитов</a>
+                                    </div>
+                                </li> 
+                                <li class="nav-item px-2"><a href="http://souz-mid.ru/accommodations" target="target-blank" class="nav-link">Размещение</a></li>
+                                <li class="nav-item dropdown active px-2">
+                                    <a href="#" class="nav-link dropdown-toggle" 
+                                       id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" 
+                                       aria-haspopup="true" aria-expanded="false">Лечение</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/page_profiles']); ?>">Профили лечения</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/doctors']); ?>">Наши врачи???</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/index#servise']) ?>">Медицинские услуги</a>
+                                    </div>
+                                </li> 
+                                <li class="nav-item px-2"><a href="http://souz-mid.ru/" target="target-blank" class="nav-link">Отдых и развлечения</a></li>
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/vouchers']); ?>" class="nav-link">Путевки???</a></li>
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/contact']); ?>" class="nav-link">Контакты</a></li>
+                            </ul>  
+                        </nav>                                                     
                     </div>
-                </div>                        
+                    <div></div> 
+                </div>
+
             </header>
 
-            <div class="container-fluid main-container">
+            <div class="container-fluid">
                 <?=
                 Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -150,19 +150,19 @@ AppAsset::register($this);
             </div>
         </div>
 
-        <footer class="footer fixed-bottom">
+        <footer class="footer pb-3">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row align-items-start ">
 
-                    <div class="col-lg-6 col-6 text-left align-self-center pl-5">
+                    <div class="col-6 text-left pl-5">
                         <p class="pull-left"> <strong>&copy; </strong>2017 -
                             <?= date('Y') ?>. НЕ официальный сайт санатория-профилактория
                             «Курорт-парк «Союз» Министерства иностранных дел Российской Федерации», Все права защищены.</p>   
                     </div>
-                    <div class="col-lg-4 col-4 text-center align-self-center">
+                    <div class="col-4 text-center ">
                         <p>приемная: +7(495)993-02-06, +7(49656)738-71</p>                                
                     </div>
-                    <div class="col-lg-2 col-2 text-lg-right text-center align-self-center pr-5">
+                    <div class="col-2 text-lg-right text-center  pr-5">
                         <p>Иконки соц сетей?</p>   
                     </div>
                 </div>

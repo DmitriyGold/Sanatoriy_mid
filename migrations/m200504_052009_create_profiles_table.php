@@ -15,7 +15,7 @@ class m200504_052009_create_profiles_table extends Migration {
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull()->unique(), // названия профиля лечения
             'description' => $this->string(), // описание профиля лечения
-            'link' => $this->string(), // ссылка на страницу с полным описанием 
+            'link' => $this->string(), // ссылка на страницу с полным описанием             
         ]);
     }
 

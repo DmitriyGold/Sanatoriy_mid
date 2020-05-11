@@ -5,7 +5,7 @@ use yii\helpers\Url;
 
 $this->title = 'Санаторий-профилакторий «Курорт-парк «Союз» МИД России». НЕ Официальный сайт';
 ?>
-<div class="site-index">
+<div class="site-index my-content">
 
     <div id="mainCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -14,9 +14,9 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             <li data-target="#mainCarousel" data-slide-to="2"></li>
         </ol>
 
-        <div class="carousel-inner pt-4">
+        <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo Url::to('@web/images/carousel/foliage1.jpg') ?>" class="d-block w-100" alt="листва">
+                <img src="<?= Url::to('@web/images/carousel/foliage1.jpg') ?>" class="d-block w-100" alt="листва">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4><strong>Санаторий-профилакторий «Курорт-парк «Союз» МИД России».</strong> <br>
                         <small>Квалифицированный персонал, современные методы лечения и оздоровления.</small>
@@ -24,13 +24,13 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php echo Url::to('@web/images/carousel/rowan1.jpg') ?>" class="d-block w-100" alt="рябина">
+                <img src="<?= Url::to('@web/images/carousel/rowan1.jpg') ?>" class="d-block w-100" alt="рябина">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4>Восстановление и оздоровление организма.</h4>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?php echo Url::to('@web/images/carousel/cone1.jpg') ?>" class="d-block w-100" alt="шишка">
+                <img src="<?= Url::to('@web/images/carousel/cone1.jpg') ?>" class="d-block w-100" alt="шишка">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4>Мы ежедневно доказываем, что лечение можно сочетать с первоклассным отдыхом на природе!</h4>
                 </div>
@@ -51,148 +51,179 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
         <h2>ТЕСТОВЫЙ ВАРИАНТ. САЙТ В РАЗРАБОТКЕ!. </h2>
     </div>
 
-    <div class="jumbotron container">
+    <div class="jumbotron my-background-col">
         <h1>Санаторий-профилакторий «Курорт-парк «Союз» МИД России»</h1>
         <p class="lead" >современное медицинское оборудование, высокий профессионализм врачей, 
             экологически чистый воздух и живописные окрестности. <br>
             Здесь готовы позаботиться о вашем здоровье и приятном отдыхе!</p>
     </div>
 
-    <div class="row justify-content-center my-5" id="servise">
-        <p><a class="btn btn-lg btn-success"  href="#">Заявка на бронирование</a></p>
-    </div>              
-
-    <div class="body-content container" >
-      
-        
-        <div class="row my-4" >
-            <div class="col-12 text-center">
-                <h3><strong>Медицинские услуги:</strong></h3>                
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">                        
-                        <a href="<?= Url::to(['/services/consultations']); ?>"> <img src="<?php echo Url::to('@web/images/med_service/11.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                
-                                                                                              <h4>Консультации специалистов</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="<?= Url::to(['/services/procedures']); ?>"> <img src="<?php echo Url::to('@web/images/med_service/22.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Процедурный кабинет</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/33.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Функциональная диагностика</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/44.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Физиотерапия</h4>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/55.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Водолечение</h4>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/66.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Грязелечение</h4>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/77.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Массаж</h4>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/88.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Лечебная физкультура</h4>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4 my-2">
-                <div class="small-box-1 text-center">
-                    <div class="main-card-services">
-                        <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/99.jpg') ?>" alt="">                                      
-                            <div class="card-content-services">
-                                <h4>Дерматология. Косметология</h4>
-                                <p></p> 
-                            </div> </a> 
-                    </div>                    
-                </div>                  
-            </div>
-
-        </div>    
-        
-        <div class="row justify-content-center my-4">
-            <p><a class="btn btn-lg btn-success" href="#">Акции и специальные предложения</a></p>
-        </div>   
-
-        <div class="row my-4">
-            <div class="col-12 text-center">
-                <h3><strong>Новости:</strong></h3>                
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aliquid, numquam perspiciatis corrupti minima officiis accusantium suscipit natus amet culpa quam voluptatum tempore saepe! Molestiae, dolor rerum placeat consequatur ad odio impedit commodi quod ab cum. Totam, modi, impedit, minus sapiente laborum eaque iste cumque pariatur voluptatibus illum assumenda id ex velit reiciendis quisquam suscipit dolore ipsum tenetur recusandae delectus nam ea possimus rem itaque aliquam quis consequuntur libero dolorum deleniti omnis distinctio adipisci perferendis quo dolorem sed voluptates magnam iusto consectetur ad natus? Fuga, deleniti, assumenda officiis similique placeat nisi laudantium accusantium est eos porro modi reprehenderit error quisquam.
-            </div>
+    <div class="row my-4">
+        <div class="col-12 text-center">
+            <h3><strong>Новости:</strong></h3>                
+            <p id="servise"><strong>COVID-19</strong>
+                В соответствии с постановлением Правительства РФ от 27 марта 2020 года 
+                санаторий временно приостановил с 28 марта 2020 года до 1 июня 2020 года бронирование мест, 
+                приём и размещение граждан в пансионатах, домах отдыха, санаториях, 
+                детских лагерях круглогодичного действия и гостиницах, расположенных в курортах федерального, 
+                регионального и местного значения, а также в иных санаторно-курортных организация.</p>
         </div>
     </div>
 
+    <div class="container-fluid  my-background-col"  >
+
+        <div class="body-content container" >
+
+            <div class="row my-4 pt-3" >
+                <div class="col-12 text-center">
+                    <h3><strong>Медицинские услуги:</strong></h3>                
+                </div>
+            </div>
+
+            <div class="row my-background-col">
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">                        
+                            <a href="<?= Url::to(['/services/consultations']); ?>"> 
+                                <img src="<?php echo Url::to('@web/images/med_service/11.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+
+                                    <h5 class="pb-2">Консультации специалистов</h5>
+
+                                    <p>Терапевт, кардиолог, невролог, физиотерапевт, диетолог, гастроэнтеролог,
+                                        педиатор, рефлексотерапевт, дерматовенеролог, врач ЛФК, врач ГБО, врач КМН.</p> 
+                                </div> 
+                            </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/services/procedures']); ?>"> <img src="<?php echo Url::to('@web/images/med_service/22.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Процедурный кабинет</h5>
+
+                                    <p></p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/services/diagnostics']) ?>"> <img src="<?php echo Url::to('@web/images/med_service/33.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Функциональная диагностика</h5>
+                                    <p></p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/services/physiotherapy']) ?>"> <img src="<?php echo Url::to('@web/images/med_service/44.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Физиотерапия</h5>
+                                    <p>Отделение предлагает широкий спектр методов лечения, 
+                                        проводимых на современном оборудовании ведущих фирм.</p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/services/hydrotherapy']) ?>"> <img src="<?php echo Url::to('@web/images/med_service/55.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Водолечение</h5>
+                                    <p>Наружное применение в лечебно-профилактических целях как пресной воды,
+                                        так и минеральной в виде ванн и душей.
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/services/mud']) ?>"> <img src="<?php echo Url::to('@web/images/med_service/66.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Грязелечение</h5>
+                                    <p>Грязь усиливает периферическое кровообращение, обладает противовоспалительным, обезболивающим и регенерирующим эффектом...                                    
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <img src="<?php echo Url::to('@web/images/med_service/100.jpg') ?>" alt="">                                      
+                            <div class="card-content-services">
+                                <h5 class="pb-2">Минеральная вода</h5>
+                                <p>внутренний прием минеральной воды</p> 
+                            </div>
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/services/massage']) ?>"> <img src="<?php echo Url::to('@web/images/med_service/77.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Лечебный массаж</h5>
+                                    <p> усиливает мышечный тонус, улучшает кровообращение,
+                                        устраняет нервно-мышечные блоки и спазмы... 
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/services/lfk']) ?>"> <img src="<?php echo Url::to('@web/images/med_service/88.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Лечебная физкультура</h5>
+                                    <p>Для полноценной реабилитации и оздоровления необходимо сочетать
+                                        лечение с грамотно подобранной физической нагрузкой.</p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/99.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Дерматология. Косметология</h5>
+                                    <p></p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+
+            </div>    
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center my-5" >
+        <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
+            Заявка на бронирование</button>
+    </div>   
+
     <div class="row m-3 ">
         <div class="col-12">
-            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/soyuz/1054945411/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Союз</a><a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/resort/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Санаторий в Москве и Московской области</a><iframe src="https://yandex.ru/map-widget/v1/-/COBcJVlz" width="1800" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/org/soyuz/1054945411/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Союз</a>
+                <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/resort/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
+                    Санаторий в Москве и Московской области</a><iframe src="https://yandex.ru/map-widget/v1/-/COBcJVlz" width="1800" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+
+                </iframe></div>
         </div>            
     </div>
 

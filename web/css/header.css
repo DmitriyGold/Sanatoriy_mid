@@ -1,27 +1,43 @@
-.navbar-brand {
-    color: blue;
-}
 .header {
-    font-size: 18px;
+    font-size: 14px;
     border-width: 0px;
     border-radius: 0px;
 }
 
 .header .header-btn {
-    background-color: #4A96DF;
-    color: #F2F2F2;
+    background-color: #79A62F;
+    color: #FFF;
     width: 140px;
-    font-size: 14px;    
+    font-size: 12px;    
+}
+
+.my-btn1 {
+    background-color: #79A62F;
+    color: #FFF;
+    width: 240px;
+    height: 40px;
+    font-size: 14px; 
+    border-radius: 6px;
+}
+
+.my-btn1:hover {
+    background-color: #85B634;
+    color: #FFF;
 }
 
 .header .header-btn:hover {
-    background-color: #357CBB; 
+    background-color: #85B634; 
     color: #F2F2F2;
 }
 
-@media(max-width:767px) {
-    .header {
-        font-size: 14px;
+.header-top {
+       background-color: #FFF;  
+}
+
+@media only screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        /* display: block;*/
+        margin-top: 0;
     }
 }
 
@@ -31,46 +47,35 @@
     }
 }
 
-.header-top {
-    background-color: #FFF;
-    font-family: 'Open Sans', sans-serif;
-}
-
 .header-bottom {
-    background-color: #36B0CF;
+    background-color: #46718C;
     height: 100%; 
+    border-bottom: 3px solid #D2E8F2;
 }    
 
 .header .navbar-nav>li>a {
-    color: rgba(242, 242, 242, 1);
-    background-color: #36B0CF;
+    color: #D2E8F2;
+    background-color: #46718C;
 }
 .header .navbar-nav>li>a:hover,
 .header .navbar-nav>li>a:focus {
-    color: rgba(235, 194, 39, 1);
-    background-color: #36B0CF;
+    color: #FFF;
+    background-color: #46718C;
 }
 .header .navbar-nav>.active>a,
 .header .navbar-nav>.active>a:hover,
 .header .navbar-nav>.active>a:focus {
-    color: rgba(235, 194, 39, 1);
-    background-color: #36B0CF;
+    color: #D2E8F2;
+    background-color: #46718C;
 }
 .header .navbar-toggle {
-    border-color: #36B0CF;
-}
-.header .navbar-toggle:hover,
-.header .navbar-toggle:focus {
-    background-color: #36B0CF;
-}
-.header .navbar-toggle .icon-bar {
-    background-color: #36B0CF;
-}
-.header .navbar-toggle:hover .icon-bar,
-.header .navbar-toggle:focus .icon-bar {
-    background-color: #36B0CF;
+    border-color: #FFF;
 }
 
+.header .dropdown-menu {
+    color: red;
+    background-color: #D2E8F2;
+}
 
 .my-logo {
     width: 120px;

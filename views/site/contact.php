@@ -12,11 +12,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <h5 class="mt-5 mb-2">Адрес: </h5> 
 
-            <p>141142, Московская область, город  Лосино- Петровский, поселок Юность, 
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 141142, Московская область, город  Лосино- Петровский, поселок Юность, 
                 территория Санаторий-профилакторий «Курорт-Парк «Союз», строение 4, корпус 2.</p>
 
 
-            <h5 class="mt-5 mb-1">Телефоны:</h5>
+            <h5 class="mt-5 mb-1"><i class="fa fa-phone" aria-hidden="true"></i> Телефоны:</h5>
             <p><ul>
                 <li>приемная: +7(495)993-02-06, +7(49656)738-71</li>
                 <li>бухгалтерия: +7(495)993-02-33</li>
@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </ul>
 
 
-            <h5 class="mt-5 mb-1">Адреса e-mail:</h5>
+            <h5 class="mt-5 mb-1"><i class="fa fa-envelope" aria-hidden="true"></i> Адреса e-mail:</h5>
             <p><ul>
                 <li>Общие обращения: mail@souz-mid.ru</li>
                 <li>Корпоративный отдел: korp@souz-mid.ru</li>

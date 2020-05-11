@@ -21,7 +21,7 @@ class SiteController extends AppController {
                 'class' => AccessControl::className(),
                 'only' => ['logout'],
                 'rules' => [
-                        [
+                    [
                         'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
@@ -143,12 +143,26 @@ class SiteController extends AppController {
         return $this->render('museums');
     }
 
-        public function actionPage_profiles() {
-            
+    public function actionPage_profiles() {
+
         $profiles = Profil::find()->all();
-            
+
         return $this->render('page_profiles', compact('profiles'));
     }
-    
-    
+
+    public function actionDoctors() {
+
+        return $this->render('doctors');
+    }
+
+    public function actionVouchers() {
+
+        return $this->render('vouchers');
+    }
+
+    public function actionPrices() {
+
+        return $this->render('prices');
+    }
+
 }
