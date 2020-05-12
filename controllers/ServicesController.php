@@ -11,6 +11,12 @@ use app\models\db\Hydrotherapy;
 use app\models\db\Mud;
 use app\models\db\Massage;
 use app\models\db\Lfk;
+use app\models\db\Cosmetology;
+use app\models\db\Pilling;
+use app\models\db\Leather;
+use app\models\db\Cosmet4;
+use app\models\db\Cosmet5;
+use app\models\db\Cosmet6;
 
 class ServicesController extends AppController {
 
@@ -64,4 +70,18 @@ class ServicesController extends AppController {
         return $this->render('lfk', compact('lfk'));
     }  
     
+    public function actionCosmetology() { // Дерматология и Косметология
+        
+        $cosmetology = Cosmetology::find()->all(); // таблица "проведение эпиляции"
+        $pilling = Pilling::find()->all(); // таблица "дерматологический пиллинг"
+        $leather = Leather::find()->all();     // таблица "дарсонвализация кожи"
+        
+        $cosmet4 = Cosmet4::find()->all(); // таблица "Массаж лица"
+        $cosmet5 = Cosmet5::find()->all(); // таблица "Ультразвуковое лечение кожи"
+        $cosmet6 = Cosmet6::find()->all(); // таблица "Криомассаж"
+                       
+        return $this->render('cosmetology', compact('cosmetology','pilling','leather','cosmet4','cosmet5','cosmet6'));
+    }
+
+
 }

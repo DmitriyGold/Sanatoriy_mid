@@ -52,7 +52,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
         <p class="lead" >современное медицинское оборудование, высокий профессионализм врачей, 
             экологически чистый воздух и живописные окрестности. <br>
             Здесь готовы позаботиться о вашем здоровье и приятном отдыхе!</p>
-         <h5>ТЕСТОВЫЙ ВАРИАНТ. САЙТ В РАЗРАБОТКЕ!</h5>
+        <h5>ТЕСТОВЫЙ ВАРИАНТ. САЙТ В РАЗРАБОТКЕ!</h5>
     </div>
 
     <div class="row my-4">
@@ -67,7 +67,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
         </div>
     </div>
 
-    <div class="container-fluid  my-background-col"  >
+    <div class="container-fluid  my-background-col pb-4"  >
 
         <div class="body-content container" >
 
@@ -183,7 +183,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 <div class="col-12 col-sm-6 col-lg-4 my-2">
                     <div class="small-box-1 text-center">
                         <div class="main-card-services">
-                            <a href="##"> <img src="<?php echo Url::to('@web/images/med_service/99.jpg') ?>" alt="">                                      
+                            <a href="<?= Url::to(['/services/cosmetology']) ?>"> <img src="<?php echo Url::to('@web/images/med_service/99.jpg') ?>" alt="">                                      
                                 <div class="card-content-services">
                                     <h5 class="pb-2">Дерматология. Косметология</h5>
                                     <p></p> 
@@ -194,14 +194,102 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
 
             </div>    
 
+            <div class="row justify-content-center my-5" >
+                <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
+                    Заявка на бронирование</button>
+            </div>   
+
+        </div>        
+    </div>    
+
+
+    <div class="container-fluid  pb-4"  >
+
+        <div class="body-content container" >         
+            <div class="row my-4 pt-3" >
+                <div class="col-12 text-center">
+                    <h3><strong>Дополнительные услуги:</strong></h3>                
+                </div>
+            </div>            
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">                        
+                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
+                                <img src="<?php echo Url::to('@web/images/add_service/d1.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+
+                                    <h5 class="pb-2">Скраб для тела</h5>
+
+                                    <p></p> 
+                                </div> 
+                            </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
+                                <img src="<?php echo Url::to('@web/images/add_service/d2.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Сауны</h5>
+
+                                    <p></p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/temp']) ?>">
+                                <img src="<?php echo Url::to('@web/images/add_service/d3.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Хамам</h5>
+                                    <p></p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
+                                <img src="<?php echo Url::to('@web/images/add_service/d4.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Джакузи</h5>
+                                    <p>
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
+                                <img src="<?php echo Url::to('@web/images/add_service/d5.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">СПА процедуры</h5>
+                                    <p>
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+
+            </div>     
+
+            <div class="row justify-content-center my-5" >
+                <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
+                    Акции и предложения</button>
+            </div>   
+
         </div>
     </div>
-
-
-    <div class="row justify-content-center my-5" >
-        <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
-            Заявка на бронирование</button>
-    </div>   
 
     <div class="row m-3 ">
         <div class="col-12">
