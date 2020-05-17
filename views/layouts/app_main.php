@@ -111,8 +111,8 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']); ?>">Инфраструктура</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
-                                        <a class="dropdown-item" href="<?= Url::to(['/add_services/temp'])?>">Питание</a>
-                                        <a class="dropdown-item" href="<?= Url::to(['/add_services/temp'])?>">Отзывы???</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Питание</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Отзывы???</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
                                         <a class="dropdown-item" href="<?= Url::to(['/site/conditions']); ?>">Условия оказания медицинской помощи</a>                                         
                                         <a class="dropdown-item" href="<?= Url::to(['/site/requisites']); ?>">Карточка реквизитов</a>
@@ -127,6 +127,7 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="<?= Url::to(['/site/page_profiles']); ?>">Профили лечения</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/doctors']); ?>">Наши врачи???</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/index#servise']) ?>">Медицинские услуги</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/index#add_servise']) ?>">Дополнительные услуги</a>
                                     </div>
                                 </li> 
                                 <li class="nav-item px-2"><a href="http://souz-mid.ru/" target="target-blank" class="nav-link">Отдых и развлечения</a></li>

@@ -17,7 +17,12 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 
-    <a class="my-3" href="#">нормативные документы в формате .PDF</a> 
+    <div class="block-3px my-4"></div>
+
+    <div class="row my-3 justify-content-center">
+        <a class="" href="<?= Url::to(['/uploads/license.pdf']); ?>" target="target-blank"><strong>нормативные документы в формате .PDF</strong></a> 
+    </div>
+
 
 </div>
 

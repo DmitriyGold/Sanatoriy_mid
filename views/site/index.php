@@ -194,7 +194,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
 
             </div>    
 
-            <div class="row justify-content-center my-5" >
+            <div class="row justify-content-center my-5"  id="add_servise">
                 <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
                     Заявка на бронирование</button>
             </div>   
@@ -216,8 +216,8 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 <div class="col-12 col-sm-6 col-lg-4 my-2">
                     <div class="small-box-1 text-center">
                         <div class="main-card-services">                        
-                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
-                                <img src="<?php echo Url::to('@web/images/add_service/d1.jpg') ?>" alt="">                                      
+                            <a href="<?= Url::to(['/add_services/scrub']) ?>"> 
+                                <img src="<?= Url::to('@web/images/add_service/d1.jpg') ?>" alt="Скраб для тела">                                      
                                 <div class="card-content-services">
 
                                     <h5 class="pb-2">Скраб для тела</h5>
@@ -231,8 +231,8 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 <div class="col-12 col-sm-6 col-lg-4 my-2">
                     <div class="small-box-1 text-center">
                         <div class="main-card-services">
-                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
-                                <img src="<?php echo Url::to('@web/images/add_service/d2.jpg') ?>" alt="">                                      
+                            <a href="<?= Url::to(['/add_services/sauna']) ?>"> 
+                                <img src="<?php echo Url::to('@web/images/add_service/d2.jpg') ?>" alt="Сауны">                                      
                                 <div class="card-content-services">
                                     <h5 class="pb-2">Сауны</h5>
 
@@ -245,8 +245,8 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 <div class="col-12 col-sm-6 col-lg-4 my-2">
                     <div class="small-box-1 text-center">
                         <div class="main-card-services">
-                            <a href="<?= Url::to(['/add_services/temp']) ?>">
-                                <img src="<?php echo Url::to('@web/images/add_service/d3.jpg') ?>" alt="">                                      
+                            <a href="<?= Url::to(['/add_services/khammam']) ?>">
+                                <img src="<?= Url::to('@web/images/add_service/d3.jpg') ?>" alt="Хамам">                                      
                                 <div class="card-content-services">
                                     <h5 class="pb-2">Хамам</h5>
                                     <p></p> 
@@ -257,8 +257,8 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 <div class="col-12 col-sm-6 col-lg-4 my-2">
                     <div class="small-box-1 text-center">
                         <div class="main-card-services">
-                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
-                                <img src="<?php echo Url::to('@web/images/add_service/d4.jpg') ?>" alt="">                                      
+                            <a href="<?= Url::to(['/add_services/dzhakuzi']) ?>"> 
+                                <img src="<?= Url::to('@web/images/add_service/d4.jpg') ?>" alt="Джакузи">                                      
                                 <div class="card-content-services">
                                     <h5 class="pb-2">Джакузи</h5>
                                     <p>
@@ -270,8 +270,8 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 <div class="col-12 col-sm-6 col-lg-4 my-2">
                     <div class="small-box-1 text-center">
                         <div class="main-card-services">
-                            <a href="<?= Url::to(['/add_services/temp']) ?>"> 
-                                <img src="<?php echo Url::to('@web/images/add_service/d5.jpg') ?>" alt="">                                      
+                            <a href="<?= Url::to(['/add_services/spa']) ?>"> 
+                                <img src="<?= Url::to('@web/images/add_service/d5.jpg') ?>" alt="">                                      
                                 <div class="card-content-services">
                                     <h5 class="pb-2">СПА процедуры</h5>
                                     <p>
@@ -280,6 +280,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                         </div>                    
                     </div>                  
                 </div>
+
 
             </div>     
 

@@ -257,3 +257,27 @@ nav.navbar .dropdown:hover > .dropdown-menu {
 .my-background-col{
     background-color: #D2E8F2 !important; 
 }
+
+.block-img1 {
+    padding: 3px;
+    margin: 3px;
+    width: 110px;
+    height: auto;
+    border-right: 3px solid #79A62F;
+}
+
+
+.block-img2 {
+    padding: 3px;
+    margin: 3px;
+    width: 250px;
+    height: auto;
+    border-right: 3px solid #79A62F;
+}
+
+.block-img3 {
+    padding: 3px;
+    margin: 3px;
+    width: 450px;
+    height: auto;
+}
