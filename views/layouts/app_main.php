@@ -125,7 +125,7 @@ AppAsset::register($this);
                                        aria-haspopup="true" aria-expanded="false">Лечение</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="dropdown-item" href="<?= Url::to(['/site/page_profiles']); ?>">Профили лечения</a>
-                                        <a class="dropdown-item" href="<?= Url::to(['/site/doctors']); ?>">Наши врачи???</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/doctors']); ?>">Наши врачи</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/index#servise']) ?>">Медицинские услуги</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/index#add_servise']) ?>">Дополнительные услуги</a>
                                     </div>
