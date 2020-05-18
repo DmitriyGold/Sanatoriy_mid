@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\db\Profil;
+use app\models\db\Doctor;
 
 class SiteController extends AppController {
 
@@ -151,8 +152,10 @@ class SiteController extends AppController {
     }
 
     public function actionDoctors() {
+        
+        $doctor = Doctor::find()->all();
 
-        return $this->render('doctors');
+        return $this->render('doctors', compact('doctor'));
     }
 
     public function actionVouchers() {

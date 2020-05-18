@@ -13,15 +13,16 @@ class DoctorWidget extends Widget {
     public function init() {
         parent::init();
 
-        if ($this->fio === null)
-            $this->fio = 'Иванов Петр Абрамович';
+        if ($this->image === null)
+            $this->image = 'NoPicAvailable.jpg';
     }
 
     public function run() {
-
-        return $this->render('doctor', ['fio' => $this->fio]);
-       
         
+        return $this->render('doctor', ['fio' => $this->fio,
+                    'image' => $this->image,
+                    'description1' => $this->description1
+        ]);
     }
 
 }
