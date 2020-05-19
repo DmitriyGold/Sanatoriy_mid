@@ -49,7 +49,9 @@ AppAsset::register($this);
 
                         <div class="row p-0 pt-2 m-0">
                             <div class="col-lg-2 text-center text-lg-left align-self-lg-center">                          
-                                <a href="<?= Url::to(['/site/index']); ?>"><img class="my-logo m-2" src="<?= Url::to('@web/images/soyuz-logo.png') ?>" alt="Логотип"></a>
+                                <a href="<?= Url::to(['/site/index']); ?>">
+                                    <img class="my-logo m-2" src="<?= Url::to('@web/images/soyuz-logo.jpg') ?>" alt="Логотип">
+                                </a>
 
                             </div>
 
@@ -115,6 +117,7 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Отзывы???</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
                                         <a class="dropdown-item" href="<?= Url::to(['/site/conditions']); ?>">Условия оказания медицинской помощи</a>                                         
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/info']); ?>">Информация для медицинских организаций</a>                                         
                                         <a class="dropdown-item" href="<?= Url::to(['/site/requisites']); ?>">Карточка реквизитов</a>
                                     </div>
                                 </li> 

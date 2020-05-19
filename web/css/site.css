@@ -16,6 +16,11 @@ body {
     padding: 70px 15px 20px;
 }
 
+
+ul .breadcrumb {
+    margin-top: 152px !important;
+}
+
 .my-content {
     margin-top: 80px;
 }

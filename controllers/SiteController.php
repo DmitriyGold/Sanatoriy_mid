@@ -171,5 +171,9 @@ class SiteController extends AppController {
     public function actionConditions() {
         return $this->render('conditions');
     }
+    
+    public function actionInfo() {
+        return $this->render('info');
+    }    
 
 }
