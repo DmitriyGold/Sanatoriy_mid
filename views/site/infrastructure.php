@@ -3,7 +3,7 @@ $this->title = 'Инфраструктура';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="mt-5 pt-5 container">
+<div class="my-2 pt-2 container">
     <div class="row">
         <div class="col-12">
             <ul>
@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <li>ресторан"Союз";</li>
                 <li>ресторан "Причал";</li>
                 <li>бар "Мираж";</li>
-                <li>37 ??? коттеджей для проживания;</li>
+                <li>свыше 30 коттеджей и домиков для проживания;</li>
                 <li>бассейн открытый и закрытый;</li>
                 <li>теннисные корты;</li>
                 <li>мини-футбольное поле;</li>

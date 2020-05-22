@@ -49,6 +49,10 @@ class SiteController extends AppController {
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'foreColor' => 0x000000, // цвет символов
+                'minLength' => 3, // минимальное количество символов
+                'maxLength' => 4, // максимальное
+                'offset' => 7, // расстояние между символами (можно отрицательное)
             ],
         ];
     }
@@ -100,15 +104,8 @@ class SiteController extends AppController {
      * @return Response|string
      */
     public function actionContact() {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
 
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-                    'model' => $model,
-        ]);
+        return $this->render('contact');
     }
 
     /**
@@ -152,10 +149,17 @@ class SiteController extends AppController {
     }
 
     public function actionDoctors() {
-        
-        $doctor = Doctor::find()->all();
+
+        $doctor = Doctor::find()->orderBy(['sort' => SORT_ASC, 'id' => SORT_ASC])->all();
 
         return $this->render('doctors', compact('doctor'));
+    }
+
+    public function actionDoctor_more($id) {
+
+        $doctor = Doctor::find()->where(['id' => $id])->all();
+
+        return $this->render('doctor_more', compact('doctor'));
     }
 
     public function actionVouchers() {
@@ -171,9 +175,38 @@ class SiteController extends AppController {
     public function actionConditions() {
         return $this->render('conditions');
     }
-    
+
     public function actionInfo() {
         return $this->render('info');
-    }    
+    }
+
+    public function actionRequest() {
+
+        $model = new ContactForm();
+
+        if ($model->load(Yii::$app->request->post())) {
+
+
+
+            if ($model->validate()) {
+                Yii::$app->session->setFlash('success', 'Данные приняты');
+
+                Yii::$app->mailer->compose('order')
+                        ->setFrom('shig-2011@mail.ru')
+                        ->setTo('test@mail.ru')
+                        ->setSubject('Заказать звонок-бронь. Санаторий МИД')
+                        ->send();
+
+                return $this->refresh();
+            } else {
+                Yii::$app->session->setFlash('error', 'Ошибка');
+            }
+        }
+
+
+        return $this->render('request', [
+                    'model' => $model,
+        ]);
+    }
 
 }

@@ -52,7 +52,6 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
         <p class="lead" >современное медицинское оборудование, высокий профессионализм врачей, 
             экологически чистый воздух и живописные окрестности. <br>
             Здесь готовы позаботиться о вашем здоровье и приятном отдыхе!</p>
-        <h5>ТЕСТОВЫЙ ВАРИАНТ. САЙТ В РАЗРАБОТКЕ!</h5>
     </div>
 
     <div class="row my-4">
@@ -293,15 +292,21 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
     </div>
 
     <div class="row m-3 ">
-        <div class="col-12">
+        <div class="col">
             <div style="position:relative;overflow:hidden;">
                 <a href="https://yandex.ru/maps/org/soyuz/1054945411/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Союз</a>
                 <a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/category/resort/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
                     Санаторий в Москве и Московской области</a><iframe src="https://yandex.ru/map-widget/v1/-/COBcJVlz" width="1800" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
 
                 </iframe></div>
+            <div class="col my-4 text-center">
+                <iframe src="https://nok.rosminzdrav.ru/MO/GetBanner/10648/1" border="0" scrolling="no" allowtransparency="true" width="300" height="110" style="border: 0;"></iframe>   
+            </div>                        
         </div>            
     </div>
+    
+    <div class="row"></div>
+    
 
 </div>
 </div>

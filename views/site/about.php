@@ -8,7 +8,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
-<div class="site-about mt-5 mb-1 pt-5 container">
+<div class="site-about my-2 pt-2 container">
 
     <div class="row">
         <div class="col-12">

@@ -1,18 +1,18 @@
 <?php
 $this->title = 'Интересные места';
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = '';
 
 use yii\helpers\Url;
 ?>
-<div class="mt-5 pt-5 container">
+<div class="mt-2 pt-2 container">
 
     <h4 class="mt-5 mb-2">Интересные места рядом с санаторием-профилакторием «СОЮЗ».</h4> 
 
-    <div class="row justify-content-center">
+    <div class="row text-center">
 
         <h5 class="my-3">Центральный музей Военно-Воздушных Сил РФ (12 км)</h5>
 
-        <div class="row justify-content-center align-items-center">        
+        <div class="row text-left">        
             <div class="col-lg-7">
                 <p>Адрес музея: 141171 Московская область, Щелковский район, г.п. Монино, ул. Музейная, д.1<br>
                     Сайт http://moninomuseum.ru<br>
@@ -33,17 +33,23 @@ use yii\helpers\Url;
                     Вам редкую возможность
                     открыть для себя малоизвестные факты из истории нашей страны.</p>
             </div>
-            <div class="col-lg-5"><img class="block-img3" src="<?= Url::to('\images\interesting places\1.jpg') ?>" alt=""></div>
+            <div class="col-lg-5  align-self-center"><img class="block-img3" src="<?= Url::to('\images\interesting places\1.jpg') ?>" alt=""></div>
         </div>
     </div>  
 
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row text-center">
         <h5 class="my-3">Военно-технический музей (12 км)</h5>
 
-        <div class="row justify-content-center align-items-center"> 
-            <div class="col-lg-5"><img class="block-img3" src="<?= Url::to('\images\interesting places\2.jpg') ?>" alt=""></div>
-            <div class="col-lg-7">
+        <div class="row text-center"> 
+
+            <div class="col-lg-5  align-self-center">
+                <div class="row">
+                    <div class="col"> <img class="block-img3" src="<?= Url::to('\images\interesting places\2_1.jpg') ?>" alt=""></div>
+                    <div class="col"> <img class="block-img3" src="<?= Url::to('\images\interesting places\2_2.jpg') ?>" alt=""></div>
+                </div>                  
+            </div>
+            <div class="col-lg-7 text-right">
                 <p>Телефоны для справок: 8(916)958-25-59 ,8(916)958-28-75<br> 
                     На территории наукограда Черноголовка, , в селе Ивановское, расположенного в 12 км от санатория-профилактория 
                     «Союз» открыт Военно-технический музей, посвященный истории гражданской и военной техники. 
@@ -67,10 +73,10 @@ use yii\helpers\Url;
     </div>  
 
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row text-center">
         <h5 class="my-3">Музей истории военной формы одежды (7 км)</h5>
 
-        <div class="row justify-content-center align-items-center"> 
+        <div class="row text-left"> 
             <div class="col-lg-7">
                 <p>Начальник музея: Камалов Владимир Николаевич<br>
                     Тел.: +7-496-253-84-95<br>
@@ -83,16 +89,16 @@ use yii\helpers\Url;
                     собирать как типовые образцы военной формы, так и опытные, эксперементальные, дабы «сохранить для истории
                     образцы военной формы».</p>
             </div>
-            <div class="col-lg-5"><img  class="block-img3" src="<?= Url::to('\images\interesting places\3.jpg') ?>" alt=""></div>
+            <div class="col-lg-5  align-self-center"><img  class="block-img3" src="<?= Url::to('\images\interesting places\3.jpg') ?>" alt=""></div>
         </div>
     </div>  
 
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row text-center">
         <h5 class="my-3">Музей Войск противовоздушной обороны (25 км)</h5>
 
-        <div class="row justify-content-center align-items-center"> 
-            <div class="col-lg-5"><img class="block-img3" src="<?= Url::to('\images\interesting places\4.jpg') ?>" alt=""></div>
+        <div class="row text-right"> 
+            <div class="col-lg-5  align-self-center"><img class="block-img3" src="<?= Url::to('\images\interesting places\4.jpg') ?>" alt=""></div>
             <div class="col-lg-7">
                 <p>Начальник музея: Кнутов Юрий Альбертович<br>
                     Тел.: +7 (498) 665-1373<br>
@@ -112,10 +118,10 @@ use yii\helpers\Url;
     </div>  
 
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row text-center">
         <h5 class="my-3">Экскурсии в Звездный городок (7 км)</h5>
 
-        <div class="row justify-content-center align-items-center"> 
+        <div class="row text-left"> 
             <div class="col-lg-7">
                 <p>Сайт http://www.gctc.ru/<br>
                     +7 (495) 740-97-22<br>
@@ -126,16 +132,16 @@ use yii\helpers\Url;
                     Центр подготовки сейчас – это действующий объект, где проходят подготовку все 
                     международные экипажи перед полетом на МКС.</p>
             </div>
-            <div class="col-lg-5"><img class="block-img3" src="<?= Url::to('\images\interesting places\5.jpg') ?>" alt=""></div>
+            <div class="col-lg-5  align-self-center"><img class="block-img3" src="<?= Url::to('\images\interesting places\5.jpg') ?>" alt=""></div>
         </div>
     </div>  
 
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row text-center">
         <h5 class="my-3">Экскурсия по музею ЦПК имени Ю.А. Гагарина.(7 км)</h5>
 
-        <div class="row justify-content-center align-items-center"> 
-            <div class="col-lg-5"><img class="block-img3" src="<?= Url::to('\images\interesting places\6.jpg') ?>" alt=""></div>        
+        <div class="row text-right"> 
+            <div class="col-lg-5 align-self-center"><img class="block-img3" src="<?= Url::to('\images\interesting places\6.jpg') ?>" alt=""></div>        
             <div class="col-lg-7">
                 <p>Запись на проведение экскурсий по музею ЦПК имени Ю.А. Гагарина производится заблаговременно
                     с понедельника по пятницу в рабочее время с 9 до 18 часов по телефону 8 (495) 526-38-74. 
@@ -151,10 +157,10 @@ use yii\helpers\Url;
     </div>  
 
 
-    <div class="row justify-content-center align-items-center">
+    <div class="row text-center">
         <h5 class="my-3">Николо-Берлюковский монастырь и с.Воскресенское (5 км)</h5>
 
-        <div class="row justify-content-center align-items-center"> 
+        <div class="row text-left"> 
             <div class="col-lg-7">
                 <p>монастырь на окраине деревни Авдотьино, на реке Воре, в 5 км от санатория-профилактория «Союз»,
                     В начале 1701 года храм становится подворьем московского Чудова монастыря
@@ -185,7 +191,12 @@ use yii\helpers\Url;
                     в 4 км к западу — Монинское шоссе Р109, в 5 км к северо-востоку — Московское малое кольцо А107. 
                     Ближайшие населённые пункты —деревня Авдотьино, .</p>
             </div>
-            <div class="col-lg-5"><img class="block-img3" src="<?= Url::to('\images\interesting places\7.jpg') ?>" alt=""></div>
+            <div class="col-lg-5 align-self-center">
+                <div class="row">
+                    <div class="col"> <img class="block-img3" src="<?= Url::to('\images\interesting places\7_1.jpg') ?>" alt=""></div>
+                    <div class="col"> <img class="block-img3" src="<?= Url::to('\images\interesting places\7_2.jpg') ?>" alt=""></div>
+                </div>                                          
+            </div>
         </div>
     </div>     
 

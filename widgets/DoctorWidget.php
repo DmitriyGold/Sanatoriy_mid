@@ -6,6 +6,7 @@ use yii\base\Widget;
 
 class DoctorWidget extends Widget {
 
+    public $id;
     public $fio;
     public $image;
     public $description1;
@@ -18,8 +19,9 @@ class DoctorWidget extends Widget {
     }
 
     public function run() {
-        
-        return $this->render('doctor', ['fio' => $this->fio,
+
+        return $this->render('doctor', ['id' => $this->id,
+                    'fio' => $this->fio,
                     'image' => $this->image,
                     'description1' => $this->description1
         ]);

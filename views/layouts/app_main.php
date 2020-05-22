@@ -70,8 +70,10 @@ AppAsset::register($this);
 
 
                             <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
-                                <button type="button" class="btn header-btn mb-1" data-toggle="modal" data-target="#myModal_Contact">
-                                    заказать звонок</button>
+                                <a href="<?= Url::to(['/site/request']); ?>">
+                                    <button type="button" class="btn header-btn mb-1">
+                                        заказать звонок</button>
+                                </a>                                
                             </div>   
 
                         </div> 
@@ -114,7 +116,7 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Питание</a>
-                                        <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Отзывы???</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Отзывы</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
                                         <a class="dropdown-item" href="<?= Url::to(['/site/conditions']); ?>">Условия оказания медицинской помощи</a>                                         
                                         <a class="dropdown-item" href="<?= Url::to(['/site/info']); ?>">Информация для медицинских организаций</a>                                         
@@ -134,7 +136,7 @@ AppAsset::register($this);
                                     </div>
                                 </li> 
                                 <li class="nav-item px-2"><a href="http://souz-mid.ru/" target="target-blank" class="nav-link">Отдых и развлечения</a></li>
-                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/vouchers']); ?>" class="nav-link">Путевки???</a></li>
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/vouchers']); ?>" class="nav-link">Путевки</a></li>
                                 <li class="nav-item px-2"><a href="<?= Url::to(['/site/contact']); ?>" class="nav-link">Контакты</a></li>
                             </ul>  
                         </nav>                                                     
@@ -157,18 +159,18 @@ AppAsset::register($this);
 
         <footer class="footer pb-3">
             <div class="container-fluid">
-                <div class="row align-items-start ">
+                <div class="row align-items-start "> 
 
                     <div class="col-6 text-left pl-5">
                         <p class="pull-left"> <strong>&copy; </strong>2017 -
-                            <?= date('Y') ?>. НЕ официальный сайт санатория-профилактория
+                            <?= date('Y') ?>. Официальный сайт санатория-профилактория
                             «Курорт-парк «Союз» Министерства иностранных дел Российской Федерации», Все права защищены.</p>   
                     </div>
                     <div class="col-4 text-center ">
                         <p>приемная: +7(495)993-02-06, +7(49656)738-71</p>                                
                     </div>
                     <div class="col-2 text-lg-right text-center  pr-5">
-                        <p>Иконки соц сетей?</p>   
+
                     </div>
                 </div>
             </div>

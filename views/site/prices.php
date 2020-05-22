@@ -1,8 +1,8 @@
 <?php
 $this->title = 'Цены';
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = '';
 ?>
-<div class="mt-5 pt-5 container">
+<div class="mt-2 pt-2 container">
     <h4 class="my-2">Цены</h4>
 
     <div class="row my-4">

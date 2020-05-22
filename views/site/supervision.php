@@ -1,8 +1,8 @@
 <?php
 $this->title = 'Надзорные органы';
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = '';
 ?>
-<div class="mt-5 pt-5 container">
+<div class="mt-2 container">
     <div class="row">
         <div class="col-12">
             <h4 class="mt-5 mb-2">Адреса надзорных органов.</h4> 

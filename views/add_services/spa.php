@@ -5,7 +5,7 @@ use yii\helpers\Url;
 $this->title = 'СПА';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="mt-5 pt-5 container">
+<div class="mt-2 container">
     <h4 class="my-2">СПА</h4>
 
 
