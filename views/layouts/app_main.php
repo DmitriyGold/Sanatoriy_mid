@@ -70,8 +70,9 @@ AppAsset::register($this);
 
 
                             <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
-                                <a href="<?= Url::to(['/site/reservation']); ?>">
+                                <a href="##">
                                     <button type="button" class="btn header-btn mb-1">
+                                        <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"></i> 
                                         заказать звонок</button>
                                 </a>                                
                             </div>   
@@ -104,7 +105,7 @@ AppAsset::register($this);
                 <div class="header-bottom">                        
                     <div class="container">
                         <nav  class="col-md-12 pt-0">
-                            <ul class="navbar-nav flex-sm-row justify-content-between align-items-center">
+                            <ul class="navbar-nav flex-sm-row justify-content-sm-between align-items-center">
                                 <li class="nav-item dropdown active px-2">
                                     <a href="#" class="nav-link dropdown-toggle" 
                                        id="navbarDropdownMenuLink" data-toggle="dropdown" 
@@ -115,7 +116,7 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="<?= Url::to(['/site/infrastructure']); ?>">Инфраструктура</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
-                                        <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Питание</a>
+                                        <a class="dropdown-item" href="<?= Url::to(['/site/nutrition']) ?>">Питание</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Отзывы</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
                                         <a class="dropdown-item" href="<?= Url::to(['/site/conditions']); ?>">Условия оказания медицинской помощи</a>                                         

@@ -176,10 +176,14 @@ class SiteController extends AppController {
         return $this->render('conditions');
     }
 
-    public function actionInfo() {
-        return $this->render('info');
+    public function actionNutrition() {
+        return $this->render('nutrition');
     }
 
+    public function actionInfo() {
+        return $this->render('info');
+    }    
+    
     public function actionReservation() {
 
         $model = new ContactForm();
@@ -194,7 +198,7 @@ class SiteController extends AppController {
                
                 Yii::$app->mailer->compose('order', ['model'=>$model])
                         ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-                        ->setTo('zolotovdmitriy2013@mail.ru')
+                        ->setTo('zolotovdmitriy2013@gmail.ru')
                         ->setSubject('Заказать звонок-бронь. Санаторий МИД')
                         ->send();
 
