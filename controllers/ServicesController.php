@@ -8,7 +8,7 @@ use app\models\db\Procedures;
 use app\models\db\Diagnostics;
 use app\models\db\Physiotherapy;
 use app\models\db\Hydrotherapy;
-use app\models\db\Mud;
+use app\models\db\Mud1;
 use app\models\db\Massage;
 use app\models\db\Lfk;
 use app\models\db\Cosmetology;
@@ -51,7 +51,7 @@ class ServicesController extends AppController {
 
     public function actionMud() {
 
-        $mud = Mud::find()->all();
+        $mud = Mud1::find()->all();
 
         return $this->render('mud', compact('mud'));
     }

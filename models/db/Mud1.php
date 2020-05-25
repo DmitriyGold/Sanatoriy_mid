@@ -5,21 +5,23 @@ namespace app\models\db;
 use Yii;
 
 /**
- * This is the model class for table "physiotherapy".
+ * This is the model class for table "mud1".
  *
  * @property int $id
  * @property string $name
+ * @property int|null $time
+ * @property int|null $number
  * @property float|null $price1
  * @property int|null $hide
  */
-class Physiotherapy extends \yii\db\ActiveRecord
+class Mud1 extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'physiotherapy';
+        return 'mud1';
     }
 
     /**
@@ -29,10 +31,9 @@ class Physiotherapy extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
+            [['time', 'number', 'hide'], 'integer'],
             [['price1'], 'number'],
-            [['hide'], 'integer'],
             [['name'], 'string', 'max' => 255],
-            [['name'], 'unique'],
         ];
     }
 
@@ -44,6 +45,8 @@ class Physiotherapy extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
+            'time' => 'Time',
+            'number' => 'Number',
             'price1' => 'Price1',
             'hide' => 'Hide',
         ];

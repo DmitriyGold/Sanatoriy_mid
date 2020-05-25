@@ -9,6 +9,11 @@ $config = [
     'bootstrap' => ['log'],
     'layout' => 'app_main', // установили свой шаблон для сайта 
     'language' => 'ru-RU',
+        'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\Module',
+        ],
+    ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
