@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'adminEmail' => 'shig-2011@mail.ru',
-    'senderEmail' => 'shig-2011@mail.ru',
-    'senderName' => 'Dmitriy',
+    'adminEmail' => 'sp_info@spmid.ru',
+    'senderEmail' => 'sp_info@spmid.ru',
+    'senderName' => 'Запрос с сайта',
 ];

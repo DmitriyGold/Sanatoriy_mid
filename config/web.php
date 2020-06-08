@@ -41,9 +41,9 @@ $config = [
             'useFileTransport' => false,
             'transport' => [
               'class'  => 'Swift_SmtpTransport',
-                'host' => 'smtp.mail.ru',
-                'username' => 'shig-2011@mail.ru',
-                'password' => '02deF2017itr2G',
+                'host' => 'mail.nic.ru',
+                'username' => 'sp_info@spmid.ru',
+                'password' => 'F!Tkm19As75',
                 'port' => '465', //465
                 'encryption' => 'ssl',                
             ],

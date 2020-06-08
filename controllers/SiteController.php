@@ -182,25 +182,27 @@ class SiteController extends AppController {
 
     public function actionInfo() {
         return $this->render('info');
-    }    
-    
+    }
+
     public function actionReservation() {
 
         $model = new ContactForm();
 
-
         if ($model->load(Yii::$app->request->post())) {
 
             if ($model->validate()) {
-                
-               
+
+
                 Yii::$app->session->setFlash('success', 'Данные приняты');
-               
-                Yii::$app->mailer->compose('order', ['model'=>$model])
+
+                Yii::$app->mailer->compose('order', ['model' => $model])
                         ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-                        ->setTo('zolotovdmitriy2013@gmail.ru')
+                        ->setTo('shig-2011@mail.ru')
                         ->setSubject('Заказать звонок-бронь. Санаторий МИД')
+                        ->setTextBody('Текст сообщения')
+                        ->setHtmlBody('<b>текст сообщения в формате HTML</b>')
                         ->send();
+
 
                 return $this->refresh();
             } else {

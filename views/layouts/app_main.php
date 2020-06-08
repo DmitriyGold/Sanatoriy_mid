@@ -70,7 +70,7 @@ AppAsset::register($this);
 
 
                             <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
-                                <a href="##">
+                                <a href="<?= Url::to(['/site/reservation']); ?>">
                                     <button type="button" class="btn header-btn mb-1">
                                         <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"></i> 
                                         заказать звонок</button>
