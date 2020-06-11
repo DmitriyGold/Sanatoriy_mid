@@ -7,7 +7,6 @@ $this->title = 'О нас';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-
 <div class="site-about my-2 pt-2 container">
 
     <div class="row">

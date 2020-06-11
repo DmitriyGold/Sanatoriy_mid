@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\base\Model;
+use yii\web\UploadedFile;
 
 /**
  * ContactForm is the model behind the contact form.
@@ -13,9 +14,14 @@ class ContactForm extends Model {
     public $name;
     public $email;
     public $phone;
+    public $date_begin; // заезд
+    public $date_end; // отъезд
+    public $conditions; // условия санаторно-курортного лечения
+    public $uploadFile;
     public $body;
     public $consent;  // согласие на обработку данных 
     public $verifyCode;
+
 
     /**
      * @return array the validation rules.
@@ -23,11 +29,14 @@ class ContactForm extends Model {
     public function rules() {
         return [
             // name, email, subject and body are required
-            [['name', 'phone', 'consent'], 'required'],
-             [['name', 'email','body','phone'], 'trim'],            
-    ['consent', 'compare', 'compareValue' => 1, 'message' => 'Выствите чебокс, иначе форма не отправится!'], // 'Согласие на обработку персональных данных',
+            [['name', 'phone', 'consent', 'email'], 'required'],
+            [['name', 'email', 'phone', 'body'], 'trim'],
+            // [['name', 'phone'], 'string', 'length' => [3, 50]], // длина должна быть в диапозоне от 3 до 50
+            // максимальный размер файла 15 Мб (1024*1024*15)
+            ['uploadFile', 'file'],
+            ['consent', 'compare', 'compareValue' => 1, 'message' => 'Выствите чебокс, иначе форма не отправится!'], // 'Согласие на обработку персональных данных',
             ['email', 'email'],
-            // verifyCode needs to be entered correctly 'trim'
+            [['date_begin', 'date_end'], 'date', 'format' => 'yyyy-MM-dd'],
             ['verifyCode', 'captcha'],
         ];
     }
@@ -40,6 +49,10 @@ class ContactForm extends Model {
             'name' => 'Ваше имя',
             'email' => 'Email',
             'phone' => 'Телефон',
+            '$date_begin' => 'Дата заезда',
+            '$date_end' => 'Дата отъезда',
+            'conditions' => 'Выберите условия санаторно-курортного лечения:',
+            'uploadFile' => 'Прикрепите скан направления врача. (При наличии) ф 070-у (утв. приказом МЗ РФ от 15 декабря 2014 г. № 834н )',
             'body' => 'Ваше сообщение',
             'consent' => 'Согласие на обработку персональных данных',
             'verifyCode' => 'введите проверочный код:',
@@ -68,3 +81,4 @@ class ContactForm extends Model {
       }
      */
 }
+

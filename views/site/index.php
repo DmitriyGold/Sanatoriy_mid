@@ -194,8 +194,10 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             </div>    
 
             <div class="row justify-content-center my-5"  id="add_servise">
-                <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
-                    Заявка на бронирование</button>
+                <a href="<?= Url::to(['/site/reservation']); ?>">
+                    <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
+                        Заявка на бронирование</button>
+                </a>
             </div>   
 
         </div>        
@@ -286,7 +288,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             <div class="row justify-content-center my-5" >
                 <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
                     Акции и предложения</button>
-            </div>   
+            </div>             
 
         </div>
     </div>
@@ -304,9 +306,9 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             </div>                        
         </div>            
     </div>
-    
+
     <div class="row"></div>
-    
+
 
 </div>
 </div>

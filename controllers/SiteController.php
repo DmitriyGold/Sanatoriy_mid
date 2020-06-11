@@ -6,6 +6,7 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\web\Response;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\db\Profiles;
@@ -53,6 +54,8 @@ class SiteController extends AppController {
                 'minLength' => 3, // минимальное количество символов
                 'maxLength' => 4, // максимальное
                 'offset' => 7, // расстояние между символами (можно отрицательное)
+                'testLimit' => 2, // значение того сколько раз та же каптча, будет отображаться. 
+            ////Влияет только на ошибочный ввод каптчи (на простой refresh не влияет)
             ],
         ];
     }
@@ -184,6 +187,7 @@ class SiteController extends AppController {
         return $this->render('info');
     }
 
+    // сделать заявку на бронирование
     public function actionReservation() {
 
         $model = new ContactForm();
@@ -192,21 +196,44 @@ class SiteController extends AppController {
 
             if ($model->validate()) {
 
+                Yii::$app->session->setFlash('success', 'Данные приняты. Наш сотрудник обязательно свяжется с Вами.');
+                Yii::$app->session->setFlash('name', $model->name);
+                Yii::$app->session->setFlash('phone', $model->phone);
+                Yii::$app->session->setFlash('email', $model->email);
 
-                Yii::$app->session->setFlash('success', 'Данные приняты');
+
+                if (($model->date_begin) <> null) 
+                Yii::$app->session->setFlash('date_begin', 'Дата заезда: ' . $model->date_begin);
+                
+                    
+                if (($model->date_end) <> null)
+                    Yii::$app->session->setFlash('date_end', 'Дата отъезда: ' . $model->date_end);
+
+
+                if (($model->body) <> null)
+                    Yii::$app->session->setFlash('body', 'Ваше сообщение: ' . $model->body);
+
+
+                $model->uploadFile = UploadedFile::getInstance($model, 'uploadFile'); // преобразовали файл из формы в объект
+
+                if (isset($model->uploadFile)) {
+
+                    $model->uploadFile->saveAs('uploads/order/' . $model->uploadFile->baseName . $model->uploadFile->extension);
+                    echo 'файл записан';
+                } 
 
                 Yii::$app->mailer->compose('order', ['model' => $model])
                         ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
                         ->setTo('shig-2011@mail.ru')
-                        ->setSubject('Заказать звонок-бронь. Санаторий МИД')
-                        ->setTextBody('Текст сообщения')
-                        ->setHtmlBody('<b>текст сообщения в формате HTML</b>')
+                        ->setSubject('Сайт. Заказать звонок-бронь. Санаторий МИД')
+                        ->setHtmlBody("<b>$model->body</b>")
                         ->send();
 
+                //      $model->uploadFile->saveAs('uploads/mail/' . $this->uploadFile->baseName . '.' . $this->uploadFile->extension);
 
                 return $this->refresh();
             } else {
-                Yii::$app->session->setFlash('error', 'Ошибка');
+                Yii::$app->session->setFlash('error', 'Ошибка.');
             }
         }
 
