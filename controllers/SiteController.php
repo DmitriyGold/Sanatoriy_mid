@@ -11,6 +11,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\db\Profiles;
 use app\models\db\Doctor;
+use app\models\db\Reservation;
 
 class SiteController extends AppController {
 
@@ -55,7 +56,7 @@ class SiteController extends AppController {
                 'maxLength' => 4, // максимальное
                 'offset' => 7, // расстояние между символами (можно отрицательное)
                 'testLimit' => 2, // значение того сколько раз та же каптча, будет отображаться. 
-            ////Влияет только на ошибочный ввод каптчи (на простой refresh не влияет)
+////Влияет только на ошибочный ввод каптчи (на простой refresh не влияет)
             ],
         ];
     }
@@ -187,7 +188,7 @@ class SiteController extends AppController {
         return $this->render('info');
     }
 
-    // сделать заявку на бронирование
+// сделать заявку на бронирование
     public function actionReservation() {
 
         $model = new ContactForm();
@@ -196,44 +197,75 @@ class SiteController extends AppController {
 
             if ($model->validate()) {
 
-                Yii::$app->session->setFlash('success', 'Данные приняты. Наш сотрудник обязательно свяжется с Вами.');
                 Yii::$app->session->setFlash('name', $model->name);
                 Yii::$app->session->setFlash('phone', $model->phone);
                 Yii::$app->session->setFlash('email', $model->email);
 
+                if (($model->date_begin) <> null)
+                    Yii::$app->session->setFlash('date_begin', 'Дата заезда: ' . $model->date_begin);
 
-                if (($model->date_begin) <> null) 
-                Yii::$app->session->setFlash('date_begin', 'Дата заезда: ' . $model->date_begin);
-                
-                    
                 if (($model->date_end) <> null)
                     Yii::$app->session->setFlash('date_end', 'Дата отъезда: ' . $model->date_end);
 
+                (($model->conditions[0]) === 0) ?
+                                $message = 'По медицинским показаниям. Направление врача мед. справка ф 070-у' : $message = 'Оздоровительный отдых (без мед. справки ф 070-у)';
+
+
+                Yii::$app->session->setFlash('conditions', $message);
 
                 if (($model->body) <> null)
-                    Yii::$app->session->setFlash('body', 'Ваше сообщение: ' . $model->body);
+                    Yii::$app->session->setFlash('body', 'Ваше сообщение: <br>' . $model->body);
 
-
+                $file_in = UploadedFile::getInstance($model, 'uploadFile');
                 $model->uploadFile = UploadedFile::getInstance($model, 'uploadFile'); // преобразовали файл из формы в объект
 
-                if (isset($model->uploadFile)) {
+                if (($file_in->name) <> null)
+                    Yii::$app->session->setFlash('file_in', 'Файл: ' . $file_in->name);
 
-                    $model->uploadFile->saveAs('uploads/order/' . $model->uploadFile->baseName . $model->uploadFile->extension);
-                    echo 'файл записан';
-                } 
-
+                // отправляем письмо с данными заказа на корпоративную почту
                 Yii::$app->mailer->compose('order', ['model' => $model])
                         ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
                         ->setTo('shig-2011@mail.ru')
-                        ->setSubject('Сайт. Заказать звонок-бронь. Санаторий МИД')
-                        ->setHtmlBody("<b>$model->body</b>")
+                        ->setSubject('Заявка на бронирование. Сайт Санаторий-провилакторий МИД')
+                        ->setHtmlBody("<b><strong>$model->name</strong></b>"
+                                . "<b>$model->phone</b>"
+                                . "<b>$model->email</b>"
+                                . "<b>$model->date_begin</b>"
+                                . "<b>$model->date_end</b>"
+                                . "<b>$model->conditions</b>" // условия санаторно-курортного лечения
+                                . "<b>$file_in->name</b>"
+                                . "<b>$model->body</b>")
                         ->send();
 
-                //      $model->uploadFile->saveAs('uploads/mail/' . $this->uploadFile->baseName . '.' . $this->uploadFile->extension);
+                // дублируем данные в базе данных
+                $order = new Reservation();
 
+                $order->name = $model->name;
+                $order->email = $model->email;
+                $order->phone = $model->phone;
+               // $order->date_order = date("YYYY-mm-dd");
+               // $order->date_begin = $model->date_begin;
+                //$order->date_end = $model->date_end;
+               // $order->conditions = $model->conditions;
+               // $order->nameFile1 = md5(microtime() . rand(0, 9999));
+              //  $order->nameFile2 = $file_in->name;
+              //  $order->body = $model->body;
+                $order->save();
+
+                debug($order);
+                
+                
+                die;
+                
+                
+                if (isset($model->uploadFile)) {
+                    $model->uploadFile->saveAs('uploads/order/' . $model->uploadFile->baseName . '.' . $model->uploadFile->extension);
+                }
+
+                Yii::$app->session->setFlash('success', "Спасибо. Данные успешно записаны.<br> Наш сотрудник обязательно свяжется с Вами.");
                 return $this->refresh();
             } else {
-                Yii::$app->session->setFlash('error', 'Ошибка.');
+                Yii::$app->session->setFlash('error', 'Произошла ошибка. Проверьте ввод данных.');
             }
         }
 

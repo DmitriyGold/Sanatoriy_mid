@@ -15,7 +15,8 @@ use Yii;
  * @property string|null $date_begin
  * @property string|null $date_end
  * @property string|null $conditions
- * @property string|null $nameFile
+ * @property string|null $nameFile1
+ * @property string|null $nameFile2
  * @property string|null $body
  */
 class Reservation extends \yii\db\ActiveRecord
@@ -36,7 +37,7 @@ class Reservation extends \yii\db\ActiveRecord
         return [
             [['name', 'email', 'phone'], 'required'],
             [['date_order', 'date_begin', 'date_end'], 'safe'],
-            [['name', 'email', 'phone', 'conditions', 'nameFile', 'body'], 'string', 'max' => 255],
+            [['name', 'email', 'phone', 'conditions', 'nameFile1', 'nameFile2', 'body'], 'string', 'max' => 255],
             [['name'], 'unique'],
             [['email'], 'unique'],
             [['phone'], 'unique'],
@@ -57,7 +58,8 @@ class Reservation extends \yii\db\ActiveRecord
             'date_begin' => 'Date Begin',
             'date_end' => 'Date End',
             'conditions' => 'Conditions',
-            'nameFile' => 'Name File',
+            'nameFile1' => 'Name File1',
+            'nameFile2' => 'Name File2',
             'body' => 'Body',
         ];
     }

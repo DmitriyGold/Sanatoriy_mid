@@ -8,7 +8,6 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 use yii\captcha\Captcha;
 
-
 $this->title = 'Оформить заявку';
 $this->params['breadcrumbs'][] = '';
 ?>
@@ -33,7 +32,7 @@ $this->params['breadcrumbs'][] = '';
         <!-- данные переданы успешно. Выводим их на экран. --> 
         <div class="alert alert-success my-3 " role="alert">
 
-            <div class="row justify-content-center mb-3"><strong><?= Yii::$app->session->getFlash('success'); ?></strong></div>
+            <div class="row justify-content-center text-center mb-3"><strong><?= Yii::$app->session->getFlash('success'); ?></strong></div>
             <div class="row my-3 pl-5">
                 Имя: <?= Html::encode(Yii::$app->session->getFlash('name')) ?><br>
             </div>
@@ -59,6 +58,16 @@ $this->params['breadcrumbs'][] = '';
                 </div>
             <?php endif; ?>
 
+            <div class="row my-3 pl-5">
+                <?= Yii::$app->session->getFlash('conditions') ?><br>
+            </div>
+
+            <?php if (Yii::$app->session->hasFlash('file_in')): ?> 
+                <div class="row my-3 pl-5">
+                    <?= Yii::$app->session->getFlash('file_in') ?><br>
+                </div>
+            <?php endif; ?>
+
             <?php if (Yii::$app->session->hasFlash('body')): ?> 
                 <div class="row my-3 pl-5">
                     <?= Yii::$app->session->getFlash('body') ?><br>
@@ -78,8 +87,6 @@ $this->params['breadcrumbs'][] = '';
 
 
     <?php if (!Yii::$app->session->hasFlash('success')): ?>
-
-
 
         <div class="row" style="font-size: 12px">
             <div class="col">
@@ -104,8 +111,8 @@ $this->params['breadcrumbs'][] = '';
 
                 <?=
                 $form->field($model, 'conditions[]')->dropdownList([
-                    'a' => 'По медицинским показаниям. Направление врача мед. справка ф 070-у',
-                    'b' => 'Оздоровительный отдых (без мед. справки ф 070-у)'
+                   'По медицинским показаниям. Направление врача мед. справка ф 070-у',
+                   'Оздоровительный отдых (без мед. справки ф 070-у)'
                 ]);
                 ?>                
                 <div class="row my-5 my-background-col">
@@ -115,7 +122,7 @@ $this->params['breadcrumbs'][] = '';
                 </div>
 
                 <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
-                
+
 
                 <?= $form->field($model, 'consent')->checkbox() ?> 
 
@@ -123,7 +130,7 @@ $this->params['breadcrumbs'][] = '';
                     <p>(на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г.)</p>
                 </a>   
 
-                <!-- Согласие на обработку данных -->
+                <!-- Согласие на обработку данных. модальное окно -->
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content px-5">

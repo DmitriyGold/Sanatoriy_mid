@@ -22,7 +22,6 @@ class ContactForm extends Model {
     public $consent;  // согласие на обработку данных 
     public $verifyCode;
 
-
     /**
      * @return array the validation rules.
      */
@@ -31,9 +30,10 @@ class ContactForm extends Model {
             // name, email, subject and body are required
             [['name', 'phone', 'consent', 'email'], 'required'],
             [['name', 'email', 'phone', 'body'], 'trim'],
-            // [['name', 'phone'], 'string', 'length' => [3, 50]], // длина должна быть в диапозоне от 3 до 50
+            [['name', 'phone', 'email'], 'string', 'length' => [3, 60]], // длина должна быть в диапозоне от 3 до 60
             // максимальный размер файла 15 Мб (1024*1024*15)
             ['uploadFile', 'file'],
+            ['conditions', 'trim'], //условия санаторно-курортного лечения
             ['consent', 'compare', 'compareValue' => 1, 'message' => 'Выствите чебокс, иначе форма не отправится!'], // 'Согласие на обработку персональных данных',
             ['email', 'email'],
             [['date_begin', 'date_end'], 'date', 'format' => 'yyyy-MM-dd'],
@@ -81,4 +81,3 @@ class ContactForm extends Model {
       }
      */
 }
-
