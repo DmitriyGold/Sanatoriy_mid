@@ -7,11 +7,14 @@ use yii\filters\AccessControl;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\db\Profiles;
 use app\models\db\Doctor;
 use app\models\db\Reservation;
+use app\models\db\Diet1;
+use app\models\db\Diet2;
 
 class SiteController extends AppController {
 
@@ -268,5 +271,14 @@ class SiteController extends AppController {
                     'model' => $model,
         ]);
     }
+    
+    public function actionDiet () {
+        
+    $model_1 = Diet1::find()->all();
+    $model_2 = Diet2::find()->all();
+    
+    return $this->render('diet',compact('model_1', 'model_2'));
+    }
+    
 
 }
