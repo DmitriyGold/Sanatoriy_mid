@@ -13,9 +13,9 @@ class m200610_144532_create_reservation_table extends Migration {
     public function safeUp() {
         $this->createTable('{{%reservation}}', [
             'id' => $this->primaryKey(),
-            'name' => $this->string()->notNull()->unique(), // имя заказчика
-            'email' => $this->string()->notNull()->unique(),
-            'phone' => $this->string()->notNull()->unique(),
+            'name' => $this->string()->notNull(), // имя заказчика
+            'email' => $this->string()->notNull(),
+            'phone' => $this->string()->notNull(),
             'date_order' => $this->date(), // дата заказа  
             'date_begin' => $this->date(), // дата заезда  
             'date_end' => $this->date(), // дата отъезда

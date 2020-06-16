@@ -13,10 +13,10 @@ $this->params['breadcrumbs'][] = '';
     </div>
 
     <div class="row text-center my-2"> 
-        <div class="col-xl-1 d-none d-xl-block">
+        <div class="col-xl-2 d-none d-xl-block">
             <div class="block-3px my-4"></div>
         </div>
-        <div class="col-xl-6  col-12">
+        <div class="col-xl-8  col-12">
             <h4 class="mb-4">Питание гостей в санатории-профилактории «Курорт-парк «Союз» МИД России»</h4>
 
             <p class="text-left">
@@ -26,8 +26,8 @@ $this->params['breadcrumbs'][] = '';
                 соленьев, салатов, гарниров, 
                 свежих овощей и фруктов, домашней выпечки и напитков.<br>
 
-                Наши повара знают все о здоровом питании и готовы предложить Вам <strong><a href="#">диетическое 
-                        питание</a></strong>  по назначению врача. <br><br>
+                Наши повара знают все о здоровом питании и готовы предложить Вам 
+                <strong>диетическое питание</strong>  по назначению врача. <br><br>
 
 
                 Часы работы шведского стола:<br>
@@ -43,10 +43,7 @@ $this->params['breadcrumbs'][] = '';
             </p>
 
         </div>
-        <div class="col-xl-4 col-12 align-self-center">
-            <img src="<?= Url::to(['/images/nutrition/buffet/1.jpg']) ?>"  style="max-width: 100%;" alt="шведский стол">"            
-        </div>
-        <div class="col-xl-1 d-none d-xl-block align-self-end">
+        <div class="col-xl-2 d-none d-xl-block align-self-end">
             <div class="block-3px my-4"></div>
         </div>
     </div>

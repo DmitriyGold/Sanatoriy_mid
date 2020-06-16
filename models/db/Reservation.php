@@ -38,9 +38,6 @@ class Reservation extends \yii\db\ActiveRecord
             [['name', 'email', 'phone'], 'required'],
             [['date_order', 'date_begin', 'date_end'], 'safe'],
             [['name', 'email', 'phone', 'conditions', 'nameFile1', 'nameFile2', 'body'], 'string', 'max' => 255],
-            [['name'], 'unique'],
-            [['email'], 'unique'],
-            [['phone'], 'unique'],
         ];
     }
 

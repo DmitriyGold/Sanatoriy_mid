@@ -12,11 +12,17 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#mainCarousel" data-slide-to="1"></li>
             <li data-target="#mainCarousel" data-slide-to="2"></li>
+            <li data-target="#mainCarousel" data-slide-to="3"></li>
+            <li data-target="#mainCarousel" data-slide-to="4"></li>
+            <li data-target="#mainCarousel" data-slide-to="5"></li>
+            <li data-target="#mainCarousel" data-slide-to="6"></li>
+            <li data-target="#mainCarousel" data-slide-to="7"></li>
+            <li data-target="#mainCarousel" data-slide-to="8"></li>
         </ol>
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?= Url::to('@web/images/carousel/foliage1.jpg') ?>" class="d-block w-100" alt="листва">
+                <img src="<?= Url::to('@web/images/carousel/1.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4><strong>Санаторий-профилакторий «Курорт-парк «Союз» МИД России».</strong> <br>
                         <small>Квалифицированный персонал, современные методы лечения и оздоровления.</small>
@@ -24,15 +30,45 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/rowan1.jpg') ?>" class="d-block w-100" alt="рябина">
+                <img src="<?= Url::to('@web/images/carousel/2.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to('@web/images/carousel/3.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to('@web/images/carousel/4.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4>Восстановление и оздоровление организма.</h4>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/cone1.jpg') ?>" class="d-block w-100" alt="шишка">
+                <img src="<?= Url::to('@web/images/carousel/5.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to('@web/images/carousel/6.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to('@web/images/carousel/7.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4>Мы ежедневно доказываем, что лечение можно сочетать с первоклассным отдыхом на природе!</h4>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to('@web/images/carousel/8.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to('@web/images/carousel/9.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
                 </div>
             </div>
         </div>

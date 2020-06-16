@@ -210,7 +210,6 @@ class SiteController extends AppController {
                 (($model->conditions[0]) === 0) ?
                                 $message = 'По медицинским показаниям. Направление врача мед. справка ф 070-у' : $message = 'Оздоровительный отдых (без мед. справки ф 070-у)';
 
-
                 Yii::$app->session->setFlash('conditions', $message);
 
                 if (($model->body) <> null)
@@ -219,8 +218,6 @@ class SiteController extends AppController {
                 $file_in = UploadedFile::getInstance($model, 'uploadFile');
                 $model->uploadFile = UploadedFile::getInstance($model, 'uploadFile'); // преобразовали файл из формы в объект
 
-                if (($file_in->name) <> null)
-                    Yii::$app->session->setFlash('file_in', 'Файл: ' . $file_in->name);
 
                 // отправляем письмо с данными заказа на корпоративную почту
                 Yii::$app->mailer->compose('order', ['model' => $model])
@@ -243,23 +240,21 @@ class SiteController extends AppController {
                 $order->name = $model->name;
                 $order->email = $model->email;
                 $order->phone = $model->phone;
-               // $order->date_order = date("YYYY-mm-dd");
-               // $order->date_begin = $model->date_begin;
-                //$order->date_end = $model->date_end;
-               // $order->conditions = $model->conditions;
-               // $order->nameFile1 = md5(microtime() . rand(0, 9999));
-              //  $order->nameFile2 = $file_in->name;
-              //  $order->body = $model->body;
+                $order->date_order = date("Y-m-d");
+                $order->date_begin = $model->date_begin;
+                $order->date_end = $model->date_end;
+                $order->conditions = $message;
+                if (($file_in->name) <> null) {
+                    $order->nameFile1 = md5(microtime() . rand(0, 9999)) . '.' . $file_in->extension;
+                    $order->nameFile2 = $file_in->name;
+                    Yii::$app->session->setFlash('file_in', 'Файл: ' . $file_in->name);                    
+                }
+                $order->body = $model->body;
+
                 $order->save();
 
-                debug($order);
-                
-                
-                die;
-                
-                
                 if (isset($model->uploadFile)) {
-                    $model->uploadFile->saveAs('uploads/order/' . $model->uploadFile->baseName . '.' . $model->uploadFile->extension);
+                    $model->uploadFile->saveAs('uploads/order/' . $order->nameFile1);
                 }
 
                 Yii::$app->session->setFlash('success', "Спасибо. Данные успешно записаны.<br> Наш сотрудник обязательно свяжется с Вами.");

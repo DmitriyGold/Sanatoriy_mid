@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = '';
     <?php if (Yii::$app->session->hasFlash('success')): ?>
 
         <!-- данные переданы успешно. Выводим их на экран. --> 
-        <div class="alert alert-success my-3 " role="alert">
+        <div class="alert alert-success my-3 col-12" role="alert">
 
             <div class="row justify-content-center text-center mb-3"><strong><?= Yii::$app->session->getFlash('success'); ?></strong></div>
             <div class="row my-3 pl-5">
@@ -75,6 +75,12 @@ $this->params['breadcrumbs'][] = '';
             <?php endif; ?>            
 
 
+        </div> 
+
+        <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
+            <a href="/index">
+                    на главную</button>
+            </a>                                
         </div>   
 
     <?php endif; ?>
@@ -111,8 +117,8 @@ $this->params['breadcrumbs'][] = '';
 
                 <?=
                 $form->field($model, 'conditions[]')->dropdownList([
-                   'По медицинским показаниям. Направление врача мед. справка ф 070-у',
-                   'Оздоровительный отдых (без мед. справки ф 070-у)'
+                    'По медицинским показаниям. Направление врача мед. справка ф 070-у',
+                    'Оздоровительный отдых (без мед. справки ф 070-у)'
                 ]);
                 ?>                
                 <div class="row my-5 my-background-col">

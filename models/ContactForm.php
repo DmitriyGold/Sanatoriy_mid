@@ -36,7 +36,7 @@ class ContactForm extends Model {
             ['conditions', 'trim'], //условия санаторно-курортного лечения
             ['consent', 'compare', 'compareValue' => 1, 'message' => 'Выствите чебокс, иначе форма не отправится!'], // 'Согласие на обработку персональных данных',
             ['email', 'email'],
-            [['date_begin', 'date_end'], 'date', 'format' => 'yyyy-MM-dd'],
+            [['date_begin', 'date_end'], 'date', 'format' => 'y-m-d'],
             ['verifyCode', 'captcha'],
         ];
     }
