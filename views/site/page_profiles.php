@@ -3,8 +3,8 @@ $this->title = 'Профили лечения';
 $this->params['breadcrumbs'][] = '';
 ?>
 <div class="mt-2 pt-2 container">
-    <h4 class="my-2">
-        Профили лечения</h4>
+    <h3 class="my-2">
+        Профили лечения</h3>
 
     <div class="row my-4">
         <p>Для того, чтобы вы полноценно отдохнули и провели время с максимальной пользой для здоровья,
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = '';
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col">
             <div class="accordion my-4" id="accordionExample">
                 <div class="card">
 

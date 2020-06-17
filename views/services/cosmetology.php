@@ -2,13 +2,8 @@
 $this->title = 'Дерматология. Косметология.';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="mt-5 pt-5 container">
-    <h4 class="my-2">Дерматология. Косметология.</h4>
-
-    <div class="row my-4">
-        <p>
-        </p>
-    </div>
+<div class="mt-3 pt-3 container">
+    <h4 class="mt-3 mb-5">Дерматология. Косметология.</h4>
 
     <h5>Дерматологический пиллинг:</h5>     
 

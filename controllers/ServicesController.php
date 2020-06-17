@@ -17,6 +17,7 @@ use app\models\db\Leather;
 use app\models\db\Cosmet4;
 use app\models\db\Cosmet5;
 use app\models\db\Cosmet6;
+use app\models\db\Info;
 
 class ServicesController extends AppController {
 
@@ -45,8 +46,9 @@ class ServicesController extends AppController {
     public function actionHydrotherapy() {
 
         $hydrotherapy = Hydrotherapy::find()->all();
+        $info = Info::find()->where(['type' => 1])->all();
 
-        return $this->render('hydrotherapy', compact('hydrotherapy'));
+        return $this->render('hydrotherapy', compact('hydrotherapy', 'info'));
     }
 
     public function actionMud() {

@@ -2,7 +2,7 @@
 $this->title = 'Консультации специалистов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="mt-5 pt-5 container">
+<div class="mt-3 pt-3 container">
     <h4 class="my-2">Консультации узких специалистов</h4>
 
     <div class="row my-4">

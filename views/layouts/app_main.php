@@ -45,60 +45,66 @@ AppAsset::register($this);
             <header class="header fixed-top container-fluid">
 
                 <div class=" header-top">
-                    <div class="container">                            
+                     
+                        <div class="container">                            
 
-                        <div class="row p-0 pt-2 m-0">
-                            <div class="col-lg-2 text-center text-lg-left align-self-lg-center">                          
-                                <a href="<?= Url::to(['/site/index']); ?>">
-                                    <img class="my-logo m-2" src="<?= Url::to('@web/images/soyuz-logo.jpg') ?>" alt="Логотип">
-                                </a>
+                            <div class="row p-0 m-0 mt-2">
 
-                            </div>
+                                <div class="col-md-2 text-center d-none d-md-block">                          
+                                    <a href="<?= Url::to(['/site/index']); ?>">
+                                        <img class="my-logo m-2" style="width: 80px;" src="<?= Url::to('@web/images/soyuz-logo.jpg') ?>" alt="Логотип">
+                                    </a>
+                                </div>                            
 
-                            <div class="col-lg-5 text-left align-self-lg-center">                                                                                            
-                                <p>Все условия для эффективного лечения </br>и комфортного отдыха</p>
-                            </div>  
+                                <div class="col-md-4 text-left d-none d-md-block">                                                                                            
+                                    <p>Все условия для эффективного лечения </br>и комфортного отдыха</p>
+                                </div>  
+                                <div class="col-12 text-center d-md-none">                                                                                            
+                                    <p>Санаторий-профилакторий «Курорт-парк «Союз» МИД России»</p>
+                                </div>  
 
-                            <div class="col-lg-3 d-none d-lg-block text-left align-self-lg-center">                                                                                          
-                                <p><i class="fa fa-phone" aria-hidden="true"></i> reception: +7(495)229-30-99</p>
-                                <p>FAX: +7(496)567-38-59</p>
-                            </div>   
+                                <div class="col-md-4  text-left d-none d-md-block">                                                                                          
+                                    <p><i class="fa fa-phone" aria-hidden="true"></i> reception: <strong>+7(495)229-30-99</strong><br>
+                                        FAX: <strong>+7(496)567-38-59</strong></p>
+                                </div>   
 
-                            <div class="col-lg-3 d-lg-none  text-left align-self-lg-center ">                                                                                          
-                                <span><i class="fa fa-phone" aria-hidden="true"></i> +7(495)229-30-99, FAX: +7(496)567-38-59</span>
+                                <div class="col-12 text-center d-md-none pb-2">                                                                                          
+                                    <span><i class="fa fa-phone" aria-hidden="true"></i> reception:  <strong>+7(495)229-30-99</strong>, 
+                                        FAX: <strong>+7(496)567-38-59</strong></span>
+                                </div> 
+
+
+                                <div class=" col-12 col-md-2 text-center text-md-right align-self-md-center">
+                                    <a href="##">
+                                        <button type="button" class="btn header-btn mb-1">
+                                            <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"></i> 
+                                            заказать звонок</button>
+                                    </a>                                
+                                </div>   
+
                             </div> 
 
+                            <div class="row m-0 p-0">
 
-                            <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
-                                <a href="##">
-                                    <button type="button" class="btn header-btn mb-1">
-                                        <i class="fa fa-phone" aria-hidden="true" style="color: #fff;"></i> 
-                                        заказать звонок</button>
-                                </a>                                
-                            </div>   
+                                <div class="d-none col-4 text-left align-self-md-center">
+                                    <!--  Показываем панель админки -->
+                                    <?php if ((!Yii::$app->user->isGuest) && (Yii::$app->user->identity->role === 'admin')) : ?>
+                                        <span class="small"><a href = "#">Админка</a></span>                                   
+                                    <?php endif; ?>
+                                </div>
 
-                        </div> 
+                                <div class="d-none col-8 text-right align-self-md-center">
+                                    <?php if (!Yii::$app->user->isGuest) : ?>
+                                        <span class="small"><a href = "#" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
+                                    <?php else : ?>
 
-                        <div class="row m-0 p-0">
+                                        <span class="small"><a href = "#">Вход</a></span>
+                                        <span class="small"><a href = "#">Регистрация</a></span>
+                                    <?php endif; ?>
+                                </div>   
+                            </div> 
+                        </div>
 
-                            <div class="d-none col-4 text-left align-self-lg-center">
-                                <!--  Показываем панель админки -->
-                                <?php if ((!Yii::$app->user->isGuest) && (Yii::$app->user->identity->role === 'admin')) : ?>
-                                    <span class="small"><a href = "#">Админка</a></span>                                   
-                                <?php endif; ?>
-                            </div>
-
-                            <div class="d-none col-8 text-right align-self-lg-center">
-                                <?php if (!Yii::$app->user->isGuest) : ?>
-                                    <span class="small"><a href = "#" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
-                                <?php else : ?>
-
-                                    <span class="small"><a href = "#">Вход</a></span>
-                                    <span class="small"><a href = "#">Регистрация</a></span>
-                                <?php endif; ?>
-                            </div>   
-                        </div> 
-                    </div>
                 </div> 
 
 

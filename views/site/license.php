@@ -6,7 +6,7 @@ $this->title = 'Лицензия';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="mt-1 container">
+<div class="mt-2 container">
     <div class="row text-center">
         <div class="col-12 col-lg-6 ">
             <img class="my-license" style="max-width: 450px" src="<?= Url::to('@web/images/license/license1.jpg'); ?>" alt="лицензия сторона 1">

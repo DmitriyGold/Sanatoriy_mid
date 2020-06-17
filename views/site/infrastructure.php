@@ -5,6 +5,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="my-2 pt-2 container">
     <div class="row">
+        <h3>Инфраструктура</h3>
+    </div>
+    
+    <div class="row">
         <div class="col-12">
             <ul>
                 <li>лечебный корпус;</li>

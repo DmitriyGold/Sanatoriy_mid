@@ -6,11 +6,11 @@ body {
 }
 
 .container-fluid .breadcrumb {
-    margin-top: 162px;
+    margin-top: 72px;
 }
 
 .container-fluid .my-content {
-    margin-top: 80px;
+    margin-top: 44px;
 }
 
 .wrap {
@@ -26,13 +26,6 @@ body {
 .wrap > .container {
     padding: 70px 15px 20px;
 }
-
-
-ul .breadcrumb {
-    margin-top: 152px !important;
-}
-
-
 
 .footer {
     height: 75px;
@@ -51,12 +44,11 @@ ul .breadcrumb {
     .footer {
         height: 110px;
     }
-
     .container-fluid .breadcrumb {
-        margin-top: 272px;
+        margin-top: 70px;
     }      
     .container-fluid .my-content {
-        margin-top: 190px;
+        margin-top: 40px;
     }  
 }
 
@@ -64,17 +56,20 @@ ul .breadcrumb {
     .footer {
         font-size: 12px;
     }
-
-
+    .container-fluid .breadcrumb {
+        margin-top: 106px;
+    }     
+    .container-fluid .my-content {
+        margin-top: 76px;
+    }  
 }
 
 @media(max-width:575px) {
-
     .container-fluid .breadcrumb {
-        margin-top: 432px;
+        margin-top: 248px;
     } 
     .container-fluid .my-content {
-        margin-top: 350px;
+        margin-top: 216px;
     }
 }
 
@@ -314,7 +309,6 @@ nav.navbar .dropdown:hover > .dropdown-menu {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
 }
 
 .block-doctor:hover {
