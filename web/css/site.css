@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    font-size: 14px;
+    font-size: 18px;
     font-family: 'Verdana', sans-serif;    
 }
 
@@ -34,7 +34,9 @@ body {
     padding-top: 10px;
     border-top: 3px solid #46718C;
     font-size: 14px;
-    font-family: 'Verdana', sans-serif;    
+    font-family: 'Verdana', sans-serif;  
+    border-top: 3px solid #D2E8F2;
+    
 }
 @media(max-width:1199px) {
 
@@ -315,6 +317,8 @@ nav.navbar .dropdown:hover > .dropdown-menu {
     border: 4px solid #79A62F;  
 }
 
+
+
 .block-doctor-img {
     padding: 0px;
     margin: 0px;
@@ -326,4 +330,12 @@ nav.navbar .dropdown:hover > .dropdown-menu {
 div.required label.control-label:before {
     content: "*";
     color: red;
+}
+
+.block-gallery {
+    border: 3px solid #D2E8F2;
+}
+
+.block-gallery:hover {
+    border: 3px solid #79A62F;  
 }

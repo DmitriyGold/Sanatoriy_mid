@@ -48,7 +48,7 @@ AppAsset::register($this);
                      
                         <div class="container">                            
 
-                            <div class="row p-0 m-0 mt-2">
+                            <div class="row p-0 m-0 pt-2">
 
                                 <div class="col-md-2 text-center d-none d-md-block">                          
                                     <a href="<?= Url::to(['/site/index']); ?>">

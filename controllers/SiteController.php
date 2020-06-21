@@ -7,7 +7,6 @@ use yii\filters\AccessControl;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
-
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\db\Profiles;
@@ -15,6 +14,7 @@ use app\models\db\Doctor;
 use app\models\db\Reservation;
 use app\models\db\Diet1;
 use app\models\db\Diet2;
+use app\models\db\News;
 
 class SiteController extends AppController {
 
@@ -70,7 +70,16 @@ class SiteController extends AppController {
      * @return string
      */
     public function actionIndex() {
-        return $this->render('index');
+
+        $news = News::find()
+                ->where(['hide' => 0])
+                ->all();
+
+        
+        if (isset($news))
+            Yii::$app->session->setFlash('news', 'Новости:');
+
+        return $this->render('index', compact('news'));
     }
 
     /**
@@ -220,8 +229,6 @@ class SiteController extends AppController {
 
                 $file_in = UploadedFile::getInstance($model, 'uploadFile');
                 $model->uploadFile = UploadedFile::getInstance($model, 'uploadFile'); // преобразовали файл из формы в объект
-
-
                 // отправляем письмо с данными заказа на корпоративную почту
                 Yii::$app->mailer->compose('order', ['model' => $model])
                         ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
@@ -250,7 +257,7 @@ class SiteController extends AppController {
                 if (($file_in->name) <> null) {
                     $order->nameFile1 = md5(microtime() . rand(0, 9999)) . '.' . $file_in->extension;
                     $order->nameFile2 = $file_in->name;
-                    Yii::$app->session->setFlash('file_in', 'Файл: ' . $file_in->name);                    
+                    Yii::$app->session->setFlash('file_in', 'Файл: ' . $file_in->name);
                 }
                 $order->body = $model->body;
 
@@ -271,14 +278,13 @@ class SiteController extends AppController {
                     'model' => $model,
         ]);
     }
-    
-    public function actionDiet () {
-        
-    $model_1 = Diet1::find()->all();
-    $model_2 = Diet2::find()->all();
-    
-    return $this->render('diet',compact('model_1', 'model_2'));
+
+    public function actionDiet() {
+
+        $model_1 = Diet1::find()->all();
+        $model_2 = Diet2::find()->all();
+
+        return $this->render('diet', compact('model_1', 'model_2'));
     }
-    
 
 }
