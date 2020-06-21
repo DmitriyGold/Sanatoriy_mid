@@ -28,10 +28,4 @@ use app\widgets\DoctorWidget;
     </div>
 
     <div class="block-3px my-4"></div>
-
-
-
-
-
-
 </div>  

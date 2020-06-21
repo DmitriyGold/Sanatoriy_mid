@@ -19,7 +19,7 @@ class m200610_144532_create_reservation_table extends Migration {
             'date_order' => $this->date(), // дата заказа  
             'date_begin' => $this->date(), // дата заезда  
             'date_end' => $this->date(), // дата отъезда
-            'conditions' => $this->string(),
+            'conditions' => $this->string(), // условия заселения
             'nameFile1' => $this->string(),            // оригинальное название файла
             'nameFile2' => $this->string(), // наименование файла в базе данных
             'body' => $this->string(),

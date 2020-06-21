@@ -9,12 +9,14 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\BellForm;
 use app\models\db\Profiles;
 use app\models\db\Doctor;
 use app\models\db\Reservation;
 use app\models\db\Diet1;
 use app\models\db\Diet2;
 use app\models\db\News;
+use app\models\db\Bell;
 
 class SiteController extends AppController {
 
@@ -183,11 +185,6 @@ class SiteController extends AppController {
         return $this->render('vouchers');
     }
 
-    public function actionPrices() {
-
-        return $this->render('prices');
-    }
-
     public function actionConditions() {
         return $this->render('conditions');
     }
@@ -286,5 +283,53 @@ class SiteController extends AppController {
 
         return $this->render('diet', compact('model_1', 'model_2'));
     }
+    
+        public function actionBell() {
+
+        $model = new BellForm();
+
+         if ($model->load(Yii::$app->request->post())) {
+
+            if ($model->validate()) {
+
+                Yii::$app->session->setFlash('name', $model->name);
+                Yii::$app->session->setFlash('phone', $model->phone);
+
+                if (($model->body) <> null)
+                    Yii::$app->session->setFlash('body', 'Ваше сообщение: <br>' . $model->body);
+
+
+                // отправляем письмо с данными заказа на корпоративную почту
+                Yii::$app->mailer->compose('order', ['model' => $model])
+                        ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
+                        ->setTo('shig-2011@mail.ru')
+                        ->setSubject('Заказать звонок. Сайт Санаторий-провилакторий МИД')
+                        ->setHtmlBody("<b><strong>$model->name</strong></b>"
+                                . "<b>$model->phone</b>"
+                                . "<b>$model->body</b>")
+                        ->send();
+
+                // дублируем данные в базе данных
+                $order = new Bell();
+
+                $order->name = $model->name;
+                $order->phone = $model->phone;
+                $order->date_bell = date("Y-m-d");
+                $order->body = $model->body;
+
+                $order->save();
+
+                Yii::$app->session->setFlash('success', "Спасибо. Данные успешно записаны.<br> Наш сотрудник обязательно свяжется с Вами.");
+                return $this->refresh();
+            } else {
+                Yii::$app->session->setFlash('error', 'Произошла ошибка. Проверьте ввод данных.');
+            }
+        }
+
+        return $this->render('bell', [
+                    'model' => $model,
+        ]);
+    }
+    
 
 }

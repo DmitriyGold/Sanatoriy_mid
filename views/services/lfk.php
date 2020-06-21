@@ -1,15 +1,36 @@
 <?php
+
+use app\widgets\Gallery1Widget;
+
 $this->title = 'Лечебная физкультура';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="mt-3 pt-3 container">
-    <h4 class="my-2">Лечебная физкультура</h4>
+<div class="mt-5 container">
+    <h3 class="my-3 my-md-2">Лечебная физкультура</h3>
+</div>
+
+<div class="mt-2 pt-2 container">
 
     <div class="row my-4">
-        <p>Восстановить силы, сохранить молодость и просто отдохнуть с пользой, вам помогут специалисты отделения лечебной физкультуры.
-        </p>
+        <div class="col">
+            В основе положительного эффекта лечебной физкультуры лежит процесс дозированной тренировки, 
+            ведущей к улучшению функциональных возможностей всего организма и отдельных его систем и органов.<br><br>
+            ЛФК призвана восстанавливать нарушенное здоровье, ликвидировать сформировавшуюся неполноценность
+            физического развития. ЛФК – это универсальный метод с широким спектром действия.
+            Дозированная физическая нагрузка являются основным стимулятором роста, развития и формирования организма, 
+            способствует повышению общей работоспособности, задерживает процессы старения.
+        </div>
     </div>
 
+    <div class="row my-4">
+        <div class="col">
+            Восстановить силы, сохранить молодость и просто отдохнуть с пользой, 
+            вам помогут специалисты отделения лечебной физкультуры.
+        </div>
+    </div>
+</div>
+
+<div class="mt-3 pt-3 container">    
     <h5>Наш санаторий может предложить Вам:</h5>     
 
     <div class="row my-1">
@@ -22,7 +43,45 @@ $this->params['breadcrumbs'][] = $this->title;
             <li>и многое другое</li>            
         </ul>
     </div>
+</div>    
 
+<div class="container-fluid my-background-col py-3">
+    <div class="row my-1 text-center">
+
+        <?=
+        Gallery1Widget::widget([
+            'varH' => 210,
+            'col' => 'col-12 col-xl-3 col-lg-6 my-2',
+            'image' => '\images\lfk\IMG_20200609_155739.jpg',
+        ])
+        ?>
+        <?=
+        Gallery1Widget::widget([
+            'varH' => 210,
+            'col' => 'col-12 col-xl-3 col-lg-6 my-2',
+            'image' => '\images\lfk\IMG_20200609_165009.jpg',
+        ])
+        ?>
+        <?=
+        Gallery1Widget::widget([
+            'varH' => 210,
+            'col' => 'col-12 col-xl-3 col-lg-6 my-2',
+            'image' => '\images\lfk\IMG_20200609_155117_1.jpg',
+        ])
+        ?>
+        <?=
+        Gallery1Widget::widget([
+            'varH' => 210,
+            'col' => 'col-12 col-xl-3 col-lg-6 my-2',
+            'image' => '\images\lfk\IMG_20200609_165320.jpg',
+        ])
+        ?>
+    </div>
+</div>
+
+
+
+<div class="container mt-4">
     <div class="row block-tabl-1 py-1">
         <div class="col-1 my-border-r">№</div>
         <div class="col-7 my-border-r">Наименование</div>
@@ -58,7 +117,10 @@ $this->params['breadcrumbs'][] = $this->title;
     }
     ?>   
 
+    <div class="block-3px mt-4"></div>
 
-    <div class="block-3px my-4"></div>
+    <div class="row">
+        <div class="col p-0 m-0 mb-5">* Информация на сайте не является публичной офертой.</div>
+    </div>
 
 </div>  

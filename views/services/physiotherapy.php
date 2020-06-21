@@ -42,6 +42,10 @@ $this->params['breadcrumbs'][] = $this->title;
     }
     ?>   
 
-    <div class="block-3px my-4"></div>
+    <div class="block-3px mt-4"></div>
+    
+    <div class="row">
+        <div class="col p-0 m-0 mb-5">* Информация на сайте не является публичной офертой.</div>
+    </div>
     
 </div> 

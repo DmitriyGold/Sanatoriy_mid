@@ -8,7 +8,4 @@ $this->params['breadcrumbs'][] = '';
     <div class="row my-4">
         <p>страница в разработке!</p>
     </div>
-
- 
-    
 </div>  

@@ -9,7 +9,7 @@ $this->title = 'О нас';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="site-about my-2 pt-2 container">
+<div class="my-2 pt-2 container">
 
     <div class="row my-5 text-center">
         <div class="col">
@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div  class="parallax1"></div>
 
-<div class="site-about mt-2 pt-2 container-fluid">
+<div class="mt-2 pt-2 container-fluid">
 
 
     <div class="container">
@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="my-background-col">
         <div class="container py-3">
             <div class="row my-3 text-center ">
-                <div class="col-12 col-md-4 align-self-center">
+                <div class="col-12 col-lg-4 align-self-center text-center text-lg-left my-2">
                     В летний период (с мая по сентябрь) погодные условия благоприятны для проведения всех 
                     основных видов климатолечения: общей аэротерапии (дозированная ходьба, прогулки, занятия ЛФК и лечебными 
                     спортивными играми на открытом воздухе), воздушных и солнечных ванн, купания в озере.  
@@ -66,14 +66,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?=
                 Gallery1Widget::widget([
-                    'col' => 4,
+                    'col' => 'col-12 col-lg-4  my-2',
                     'image' => '\images\about\1.jpg',
                 ])
                 ?>
 
                 <?=
                 Gallery1Widget::widget([
-                    'col' => 4,
+                    'col' => 'col-12 col-lg-4 my-2',
                     'image' => '\images\about\2.jpg',
                 ])
                 ?>
@@ -81,32 +81,107 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 
-    <div class="container">
-        <div class="row my-3">
-            <div class="col">
+
+    <div class="container py-3">
+        <div class="row my-3 text-center ">
+            <?=
+            Gallery1Widget::widget([
+                'col' => 'col-12 col-lg-4  my-2',
+                'image' => '\images\about\3.jpg',
+            ])
+            ?>
+
+            <?=
+            Gallery1Widget::widget([
+                'col' => 'col-12 col-lg-4 my-2',
+                'image' => '\images\about\4.jpg',
+            ])
+            ?>
+            <div class="col-12 col-lg-4 align-self-center text-center text-lg-right my-2">
                 Зимний период (декабрь-март) характеризуется тренирующим воздействием биоклимата на организм человека.
                 Основными видами климатолечения являются: дозированные пешеходные прогулки, спортивные игры. На территории 
-                санатория-профилактория функционирует <strong><i>открытый подогреваемый бассейн</i></strong>.
+                санатория-профилактория функционирует <strong><i>открытый подогреваемый бассейн</i></strong>. Есть конюшня и зоопарк.  
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="my-background-col">
+        <div class="container py-3">
+            <div class="row my-3 text-center ">
+                <div class="col-12 col-lg-4 align-self-center text-center text-lg-left my-2">
+                    Отдохнуть, укрепить организм, зарядиться положительными эмоциями у нас можно в любое время года.  
+                </div>
+
+                <?=
+                Gallery1Widget::widget([
+                    'col' => 'col-12 col-lg-4  my-2',
+                    'image' => '\images\about\5.jpg',
+                ])
+                ?>
+
+                <?=
+                Gallery1Widget::widget([
+                    'col' => 'col-12 col-lg-4 my-2',
+                    'image' => '\images\about\6.jpg',
+                ])
+                ?>
             </div>
         </div>
+    </div>
 
 
-        <div class="row my-3">
-            <div class="col my-3">
-                Отдохнуть, укрепить организм, зарядиться положительными эмоциями у нас можно в любое время года.
+    <div class="container py-3">
+        <div class="row my-3 text-center ">
+            <?=
+            Gallery1Widget::widget([
+                'col' => 'col-12 col-lg-4  my-2',
+                'image' => '\images\about\7.jpg',
+            ])
+            ?>
+
+            <?=
+            Gallery1Widget::widget([
+                'col' => 'col-12 col-lg-4 my-2',
+                'image' => '\images\about\8.jpg',
+            ])
+            ?>
+            <div class="col-12 col-lg-4 align-self-center text-center text-lg-right my-2">
+                Отдых в нашем санатории-профилактории можно сочетать с оздоровительными спа-процедурами 
+                для тела и лица. Подобранные СПА программы направлены на очищение организма и восстановление функций 
+                органов и систем.
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="my-background-col">
+        <div class="container py-3">
+            <div class="row my-3 text-center ">
+                <div class="col-12 col-lg-4 align-self-center text-center text-lg-left my-2">
+                    Мы высоко ценим своих гостей и партнеров и обеспечиваем индивидуальный подход и высокое качество санаторных услуг. 
+                    Надеемся, что ознакомившись с сайтом, Вы выберете наш санаторий, сочетающий высокие стандарты обслуживания!
+                </div>
+
+                <?=
+                Gallery1Widget::widget([
+                    'col' => 'col-12 col-lg-4  my-2',
+                    'image' => '\images\about\9.jpg',
+                ])
+                ?>
+
+                <?=
+                Gallery1Widget::widget([
+                    'col' => 'col-12 col-lg-4 my-2',
+                    'image' => '\images\about\10.jpg',
+                ])
+                ?>
             </div>
         </div>
- 
+    </div>
 
-    <div class="row my-3">
-        <div class="col my-3">
-            Мы высоко ценим своих гостей и партнеров и обеспечиваем индивидуальный подход и высокое качество санаторных услуг. 
-            Надеемся, что ознакомившись с сайтом, Вы выберете наш санаторий, сочетающий высокие стандарты обслуживания!
-        </div>
-
-    </div> 
-   </div>
-    
 </div>
 
 

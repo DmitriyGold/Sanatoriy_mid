@@ -5,9 +5,9 @@ use yii\helpers\Url;
 
 <?php $var = md5(microtime() . rand(0, 9999)) ?>
 
-<div class="col-<?= $col ?>">
+<div class="<?= $col ?>">
     <a href="##" data-toggle="modal" data-target="#myModal1_<?= $var ?>">
-        <img  class="block-gallery" style="height: 250px;" src="<?= Url::to($image) ?>"  alt="#">
+        <img  class="block-gallery" style="height: <?= $varH?>px;" src="<?= Url::to($image) ?>"  alt="#">
     </a>
 </div>
 
@@ -21,7 +21,7 @@ use yii\helpers\Url;
                 </button>
             </div>
             <div class="modal-body">
-                <img style="width: 90%;" src="<?= $image; ?>"  alt="#">
+                <img style="width: 95%;" src="<?= $image; ?>"  alt="#">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>

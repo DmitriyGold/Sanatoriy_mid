@@ -17,16 +17,21 @@ use yii\base\Widget;
  */
 class Gallery1Widget extends Widget {
 
-    public $col; // 
+    public $varH; // высота картинки 
+    public $col; // настройка столбца (от 1 до 12)
     public $image; // путь к картинке 
 
     public function init() {
         parent::init();
+
+        if (!isset($this->varH))
+            $this->varH = 215;
     }
 
     public function run() {
 
         return $this->render('gallery1', [
+                    'varH' => $this->varH,
                     'col' => $this->col,
                     'image' => $this->image
         ]);

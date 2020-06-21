@@ -3,16 +3,15 @@ $this->title = 'Инфраструктура';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="my-2 pt-2 container">
+<div class="my-5 pt-2 container">
     <div class="row">
         <h3>Инфраструктура</h3>
     </div>
     
     <div class="row">
-        <div class="col-12">
+        <div class="col">
             <ul>
                 <li>лечебный корпус;</li>
-                <li>столовая;</li>
                 <li>шведский стол;</li>
                 <li>ресторан"Союз";</li>
                 <li>ресторан "Причал";</li>

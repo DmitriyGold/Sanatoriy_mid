@@ -198,6 +198,20 @@ nav.navbar .dropdown:hover > .dropdown-menu {
     background-size: cover;
 }
 
+.parallax-lfk {
+    /* The image used */
+    background-image: url("../images/lfk/ekzarta.jpg");
+
+    /* Set a specific height */
+    min-height: 460px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .main-card-services {
     position: relative;
 }
@@ -338,4 +352,20 @@ div.required label.control-label:before {
 
 .block-gallery:hover {
     border: 3px solid #79A62F;  
+}
+
+.block-svg svg {
+  fill: darkgreen;
+}
+
+.block-svg svg:hover {
+  fill: #79A62F;  
+}
+
+.image-two svg {
+  fill: darkgreen;
+}
+
+.image-two svg:hover {
+  fill: #79A62F;  
 }

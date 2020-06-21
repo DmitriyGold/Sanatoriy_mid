@@ -9,7 +9,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="mt-3 pt-3 container">
     <h4 class="my-2">Водолечение</h4>
 
-    <div class="row my-4">
+    <div class="row mt-4">
         <p>Физиологическое действие водолечения основано на температурном, механическом и химическом раздражении 
             рецепторов кожи минеральной и обычной водой.</p>
     </div>
@@ -74,9 +74,10 @@ $this->params['breadcrumbs'][] = $this->title;
     }
     ?>   
 
-    <div class="block-3px my-4"></div>
-
-
-
+    <div class="block-3px mt-4"></div>
+    
+    <div class="row">
+        <div class="col p-0 m-0 mb-5">* Информация на сайте не является публичной офертой.</div>
+    </div>
 
 </div> 
