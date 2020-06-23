@@ -36,7 +36,7 @@ body {
     font-size: 14px;
     font-family: 'Verdana', sans-serif;  
     border-top: 3px solid #D2E8F2;
-    
+
 }
 @media(max-width:1199px) {
 
@@ -354,18 +354,24 @@ div.required label.control-label:before {
     border: 3px solid #79A62F;  
 }
 
+.block-wrapper-svg {
+
+}
+
+.block-svg {
+    mar
+}
+
 .block-svg svg {
-  fill: darkgreen;
+    height: 120px;
+    fill: #F2F2F2;
 }
 
-.block-svg svg:hover {
-  fill: #79A62F;  
+.block-svg .cls-1 {
+    fill: #79A62F;
 }
 
-.image-two svg {
-  fill: darkgreen;
+.block-svg .cls-1:hover {
+    fill:  #85B634;
 }
 
-.image-two svg:hover {
-  fill: #79A62F;  
-}
