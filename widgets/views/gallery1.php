@@ -23,9 +23,6 @@ use yii\helpers\Url;
             <div class="modal-body">
                 <img style="width: 95%;" src="<?= $image; ?>"  alt="#">
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-            </div>
         </div>
     </div>
 </div>

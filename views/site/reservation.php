@@ -13,13 +13,12 @@ $this->params['breadcrumbs'][] = '';
 ?>
 
 <div class="container">
-
     <div class="site-contact text-center">
         <h3><?= Html::encode($this->title) ?></h3>
     </div>    
 </div>   
 
-<div class="my-3 py-3 my-background-col text-center container-fluid">
+<div class="my-4 py-3 my-background-col text-center container-fluid">
     Мы очень рады что вы заинтересовались наши санаторием. 
     Санаторий-профилакторий «Курорт-парк «Союз» МИД России» одно из лучших мест 
     Подмосковья для оздоровления и отдыха. Заполните форму.

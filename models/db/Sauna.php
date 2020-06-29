@@ -33,7 +33,7 @@ class Sauna extends \yii\db\ActiveRecord
             [['name', 'description1', 'description2'], 'required'],
             [['price1'], 'number'],
             [['hide'], 'integer'],
-            [['name', 'description1', 'description2'], 'string', 'max' => 255],
+            [['name', 'description1', 'description2', 'path'], 'string', 'max' => 255],
         ];
     }
 
@@ -49,6 +49,7 @@ class Sauna extends \yii\db\ActiveRecord
             'description2' => 'Description2',
             'price1' => 'Price1',
             'hide' => 'Hide',
+            'path' => 'Path',
         ];
     }
 }

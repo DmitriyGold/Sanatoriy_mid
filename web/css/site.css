@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     font-size: 18px;
-    font-family: 'Verdana', sans-serif;    
+    font-family: 'Verdana', sans-serif;  
 }
 
 .container-fluid .breadcrumb {
@@ -198,12 +198,12 @@ nav.navbar .dropdown:hover > .dropdown-menu {
     background-size: cover;
 }
 
-.parallax-lfk {
+.parallax2 {
     /* The image used */
-    background-image: url("../images/lfk/ekzarta.jpg");
+    background-image: url("../images/parallax2.jpg");
 
     /* Set a specific height */
-    min-height: 460px; 
+    min-height: 570px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -211,6 +211,116 @@ nav.navbar .dropdown:hover > .dropdown-menu {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.parallax3 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax0_1.jpg");
+
+    /* Set a specific height */
+    min-height: 670px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1_1 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax1_1.jpg");
+
+    /* Set a specific height */
+    min-height: 670px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1_2 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax1_2.jpg");
+
+    /* Set a specific height */
+    min-height: 570px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax1_3 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax1_3.jpg");
+
+    /* Set a specific height */
+    min-height: 570px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax1_4 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax1_4.jpg");
+
+    /* Set a specific height */
+    min-height: 570px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax1_5 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax1_5.jpg");
+
+    /* Set a specific height */
+    min-height: 570px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1_6 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax1_6.jpg");
+
+    /* Set a specific height */
+    min-height: 570px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1_7 {
+    /* The image used */
+    background-image: url("../images/parallax/parallax1_7.jpg");
+
+    /* Set a specific height */
+    min-height: 570px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .main-card-services {
     position: relative;

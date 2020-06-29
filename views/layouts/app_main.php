@@ -123,7 +123,9 @@ AppAsset::register($this);
                                         <a class="dropdown-item" href="<?= Url::to(['/site/license']); ?>">Лицензия</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/supervision']); ?>">Контролирующие органы</a>
                                         <a class="dropdown-item" href="<?= Url::to(['/site/nutrition']) ?>">Питание</a>
+                                        <!--
                                         <a class="dropdown-item" href="<?= Url::to(['/add_services/temp']) ?>">Отзывы</a>
+                                        -->
                                         <a class="dropdown-item" href="<?= Url::to(['/site/museums']); ?>">Интересные места рядом</a> 
                                         <a class="dropdown-item" href="<?= Url::to(['/site/conditions']); ?>">Условия оказания медицинской помощи</a>                                         
                                         <a class="dropdown-item" href="<?= Url::to(['/site/info']); ?>">Информация для медицинских организаций</a>                                         

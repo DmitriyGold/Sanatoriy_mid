@@ -40,8 +40,28 @@ class Add_servicesController extends AppController {
     }
 
     public function actionSpa() {
-     
+
         return $this->render('spa');
-    }    
+    }
+
+    public function actionHall1() {
+
+        return $this->render('hall1');
+    }
+
+    public function actionHall2() {
+
+        return $this->render('hall2');
+    }
+
+    public function actionSolarium() {
+
+        return $this->render('solarium');
+    }
     
+        public function actionMassage2() {
+
+        return $this->render('massage2');
+    }
+
 }

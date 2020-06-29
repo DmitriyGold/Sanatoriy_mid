@@ -16,13 +16,13 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
             <li data-target="#mainCarousel" data-slide-to="4"></li>
             <li data-target="#mainCarousel" data-slide-to="5"></li>
             <li data-target="#mainCarousel" data-slide-to="6"></li>
-            <li data-target="#mainCarousel" data-slide-to="7"></li>
-            <li data-target="#mainCarousel" data-slide-to="8"></li>
         </ol>
+
+        <?php $carousel = app\controllers\dateCheker(date); ?>        
 
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?= Url::to('@web/images/carousel/1.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <img src="<?= Url::to($carousel . '1.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4><strong>Санаторий-профилакторий «Курорт-парк «Союз» МИД России».</strong> <br>
                         <small>Квалифицированный персонал, современные методы лечения и оздоровления.</small>
@@ -30,46 +30,37 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/2.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <img src="<?= Url::to($carousel . '2.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/3.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <img src="<?= Url::to($carousel . '3.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/4.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <img src="<?= Url::to($carousel . '4.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4>Восстановление и оздоровление организма.</h4>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/5.jpg') ?>" class="d-block w-100" alt="санаторий">
-                <div class="carousel-caption d-none d-md-block text-uppercase">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/6.jpg') ?>" class="d-block w-100" alt="санаторий">
-                <div class="carousel-caption d-none d-md-block text-uppercase">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/7.jpg') ?>" class="d-block w-100" alt="санаторий">
-                <div class="carousel-caption d-none d-md-block text-uppercase">
-                    <h4>Мы ежедневно доказываем, что лечение можно сочетать с первоклассным отдыхом на природе!</h4>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/8.jpg') ?>" class="d-block w-100" alt="санаторий">
-                <div class="carousel-caption d-none d-md-block text-uppercase">
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="<?= Url::to('@web/images/carousel/9.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <img src="<?= Url::to($carousel . '5.jpg') ?>" class="d-block w-100" alt="санаторий">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
                     <h4>Мы работаем для Вас круглый год!</h4>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to($carousel . '6.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="<?= Url::to($carousel . '7.jpg') ?>" class="d-block w-100" alt="санаторий">
+                <div class="carousel-caption d-none d-md-block text-uppercase">
+                    <h4>Мы ежедневно доказываем, что лечение можно сочетать с первоклассным отдыхом на природе!</h4>
                 </div>
             </div>
         </div>
@@ -110,7 +101,6 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
         </div>
     <?php } ?>
     <!-- Блок новостей. конец-->
-
 
     <div class="container-fluid  my-background-col pb-4"  id="servise" >
 
@@ -239,7 +229,7 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
 
             </div>    
 
-            <div class="row justify-content-center my-5"  id="add_servise">
+            <div class="row justify-content-center my-5">
                 <a href="<?= Url::to(['/site/reservation']); ?>">
                     <button type="button" class="my-btn1 mb-1" data-toggle="modal" data-target="#myModal_Contact">
                         Заявка на бронирование</button>
@@ -248,6 +238,8 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
 
         </div>        
     </div>    
+
+    <div  class="parallax3"></div>
 
     <!--  Профили лечения -->
     <div class="container-fluid my-3 py-3"  >
@@ -361,9 +353,13 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
         </div>
     </div>
 
-    <div class="container-fluid my-5 pt-3 pb-4 my-background-col">
 
-        <div class="body-content container">         
+    <div  class="parallax2"></div>
+
+
+    <div class="container-fluid my-5 pt-3 pb-4 my-background-col "   id="add_servise">
+
+        <div class="body-content container"   >         
             <div class="row my-4 pt-3" >
                 <div class="col-12 text-center">
                     <h3><strong>Wellness & SPA:</strong></h3>                
@@ -435,6 +431,98 @@ $this->title = 'Санаторий-профилакторий «Курорт-п�
                                     <p>
                                     </p> 
                                 </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/hall1']) ?>"> 
+                                <img src="<?= Url::to('@web/images/add_service/d6.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Тренажерный зал</h5>
+                                    <p>
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/hall2']) ?>"> 
+                                <img src="<?= Url::to('@web/images/add_service/d7.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Танцевальный зал</h5>
+                                    <p>
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/solarium']) ?>"> 
+                                <img src="<?= Url::to('@web/images/add_service/d8.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Солярий</h5>
+                                    <p>
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            <a href="<?= Url::to(['/add_services/massage2']) ?>"> 
+                                <img src="<?= Url::to('@web/images/add_service/d9.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Аюрведа</h5>
+                                    <p>
+                                    </p> 
+                                </div> </a> 
+                        </div>                    
+                    </div>                  
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                           
+                                <img src="<?= Url::to('@web/images/add_service/d10.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Парикмахерские услуги</h5>
+                                    <p>
+                                    </p> 
+                                </div>  
+                        </div>                    
+                    </div>                  
+                </div>
+                                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                   
+                                <img src="<?= Url::to('@web/images/add_service/d11.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Барокамера</h5>
+                                    <p>
+                                    </p> 
+                                </div> 
+                        </div>                    
+                    </div>                  
+                </div>
+                                <div class="col-12 col-sm-6 col-lg-4 my-2">
+                    <div class="small-box-1 text-center">
+                        <div class="main-card-services">
+                            
+                                <img src="<?= Url::to('@web/images/add_service/d12.jpg') ?>" alt="">                                      
+                                <div class="card-content-services">
+                                    <h5 class="pb-2">Инфракрасные ванны</h5>
+                                    <p>
+                                    </p> 
+                                </div>
                         </div>                    
                     </div>                  
                 </div>

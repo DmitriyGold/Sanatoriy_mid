@@ -1,12 +1,13 @@
 <?php
 
 use yii\helpers\Url;
+use app\widgets\Gallery1Widget;
 
 $this->title = 'Джакузи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mt-2 container">
-    <h4 class="my-2">Джакузи</h4>
+    <h4 class="my-4">Джакузи</h4>
 
     <div class="row my-4">
         <p>При гидромассаже струи воды, смешанной с пузырьками воздуха, 
@@ -20,8 +21,16 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php foreach ($dzhakuzi as $value) { ?>
         <div class="row py-4">
 
-            <div class="col-3"><img class="block-img2" src="<?= Url::to(['/images/add_service/dzakuz1.jpg']) ?>" alt="L;frepb"></div> 
-            <div class="col-9">
+                      <?=
+            Gallery1Widget::widget([
+                'varH' => 210,
+                'col' => 'col-12 col-lg-4 text-center text-lg-left my-2',
+                'image' => $value->path,
+            ])
+            ?>
+            
+            
+            <div class="col-12 col-lg-8 mt-3">
                 <div class="row"><strong><?= $value->description1 ?></strong></div> 
                 <div class="row"><strong><?= $value->description2 ?></strong></div> 
                 <div class="row"><strong><?= $value->description3 ?></strong></div> 

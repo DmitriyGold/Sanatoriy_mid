@@ -6,7 +6,7 @@ use yii\helpers\Url;
 use app\widgets\Gallery1Widget;
 ?>
 <div class="my-2 pt-2 container">
-    <h4 class="mt-5 mb-2">Интересные места рядом с санаторием-профилакторием «СОЮЗ».</h4> 
+    <h4 class="my-3">Интересные места рядом с санаторием-профилакторием «СОЮЗ».</h4> 
 </div>
 
 
